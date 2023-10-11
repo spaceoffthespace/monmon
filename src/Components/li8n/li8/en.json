@@ -1,0 +1,248 @@
+{
+    "navbar": {
+        "home": "Home",
+        "recharge": "Recharge",
+        "grab": "Grab",
+        "task": "Task",
+        "account": "Account"
+    },
+    "tabs": {
+        "pending": "Pending",
+        "settlement": "Settlement",
+        "settled": "Settled",
+        "frozen": "Frozen"
+    },
+    "invites": {
+        "inviteFriends": "Invite Friends & Earn Rewards!",
+        "inviteDescription": "Share your unique referral link with friends and family. When they sign up using your link, you both get rewarded! Your referrals earn extra commission, and you level up with exciting bonuses. Let's grow together!",
+        "linkCopied": "Link copied!",
+        "copyInviteLink": "Copy Invite Link",
+        "goBack": "Go Back"
+    },
+    "manageWalletPage": {
+        "manageWalletHeading": "Manage Wallet Address",
+        "noWalletAddressText": "You haven't set your wallet address yet. Please update it below:",
+        "updateWalletLabel": "Update Wallet Address",
+        "updateWalletButton": "Update Wallet Address",
+        "additionalInfoText1": "Additional information about managing your wallet address can go here.",
+        "additionalInfoText2": "For security purposes, make sure to keep your wallet address confidential.",
+        "snack1": "Wallet has been updated successfully!",
+        "snack2": "Wallet has been updated successfully!",
+        "snack3": "You can only update your delivery address once every 24 hours."
+    },
+    "accountPage": {
+        "pageTitle": "Account",
+        "profileAvatarAltText": "Profile",
+        "phoneNumberLabel": "Phone Number",
+        "emailLabel": "Email:",
+        "accountTypeLabel": "Account Type"
+    },
+    "MenuAbout": {
+        "pageTitle": "About us"
+    },
+    "MenuSecurity": {
+        "pageTitle": "Security & Mutual Trust"
+    },
+    "notifPage": {
+        "noName": "Notifications",
+        "noNot": "No notifications available now.",
+        "transactionapproved": "Your transaction of {{amount}} has been approved.",
+        "transactiondenied": "Your transaction of {{amount}} has been denied.",
+        "withdrawalapproved": "Your withdrawal of {{amount}} has been approved.",
+        "withdrawaldenied": "Your withdrawal request has been denied. Please check the details and try again."
+    },
+    "teamReport": {
+        "ReportName": "Team Report",
+        "ReportNot": "No team report data available"
+    },
+    "Records": {
+        "Pagetitle": "Records",
+        "nodata": "No data available",
+        "RecordText1": "Recharge and Withdrawal History"
+    },
+    "TeamPage": {
+        "Pagetitle": "Teams",
+        "text1": "Team Revenue Today",
+        "text2": "Team Total Earnings",
+        "text3": "Tasks Completed by Team",
+        "text4": "Team Locked Tasks",
+        "text5": "Tasks in Progress",
+        "text6": "Team Hold Amount",
+        "grab": "Grab Order",
+        "chat": "Team Chat",
+        "alert": "Teams isn't available for your account type.",
+        "fineprnt1": "T1: Team Earnings: Remember, tasks tackled by the team also contribute to individual growth. Together, as a unit, you achieve more.",
+        "fineprnt2": " 2: Sharing Tasks: When a team task is obtained, it's crucial to collaborate efficiently to ensure swift completion and avoid potential setbacks."
+    },
+    "AccountComp": {
+        "invitecode": " invite code",
+        "copylink": "Copy",
+        "copiedLink": "Copied!",
+        "balance": "BALANCE",
+        "Withdraw": "Withdraw",
+        "Recharge": "Recharge",
+        "Teams": "Teams",
+        "Records": "Records",
+        "ManageWallet": "Manage Wallet",
+        "Invite": "Invite",
+        "Revenue": "Revenue",
+        "TodayEarning": "Today's",
+        "Totalearning": "Total",
+        "HoldAmount": "Hold",
+        "Menu_Account": "Account",
+        "Menu_Notifications": "Notifications",
+        "Menu_Records": "Records",
+        "Menu_Invite": "Invite Friends",
+        "Menu_Teams": "Team Reports",
+        "Menu_Secuirty": "Secuirty",
+        "Menu_Aboutus": "About us",
+        "Menu_logout": "logout"
+    },
+    "GrabComp": {
+        "Pagetitle": "Grab",
+        "All": "All",
+        "PersonalEarnings": "Personal Earnings",
+        "CompletedOrders": "Completed Orders",
+        "LockedOrders": "Locked Orders",
+        "UnfinishedOrders": "Unfinished Orders",
+        "Hold": "Hold",
+        "CurrentBalance": "Current Balance",
+        "Grab": "Grab Order",
+        "text1": "1: How You Earn: Each task comes with its own commission, determined by the task's value and your account status. Higher tier accounts have access to greater earning opportunities.",
+        "text2": "2: The system sends tasks randomly. Complete them as soon as possible after matching them, so as to avoid hanging all the time.",
+        "text3": "Heads-Up: Every time you obtain a task, its details are shared with the merchant. Orders left unresolved for over an hour get put on a temporary freeze, along with the task's associated funds, until further clarification.",
+        "insufficientBalance": "Insufficient balance to grab a task. Please recharge a minimum of 20USD.",
+        "pendingTask": "You have an existing pending task. Please complete it before grabbing a new one.",
+        "noTasksLeft": "You have reached your daily limit for orders, Please upgrade for more daily tasks."
+    },
+    "RechargeComp": {
+        "Pagetitle": "Recharge",
+        "RechargeAmount": "Recharge Amount",
+        "HelperText": "Enter or select the desired recharge amount.",
+        "Currency": "Currency",
+        "Continue": "Continue"
+    },
+    "WithdrawComp": {
+        "Pagetitle": "Withdraw",
+        "title2": "Withdraw Funds",
+        "WithdrawAmount": "Withdrawal Amount",
+        "BalanceText": "Available Balance",
+        "DeliveryAddressText": "Please confirm your delivery address",
+        "ConfirmWithdrawalButton": "Confirm Withdrawal",
+        "InsufficientBalanceError": "Insufficient balance. Please enter a valid withdrawal amount.",
+        "CurrencyLabel": "Currency",
+        "RequestWithdrawalButton": "Request Withdrawal",
+        "InfoText1": "Please allow up to 3 business days for processing the withdrawal request.",
+        "InfoText2": "For any inquiries or issues, please contact our support team.",
+        "TasksNotCompleted": "You must finish all available tasks for today before withdrawing.",
+        "FinePrint": "* Your withdrawal request will be processed within 3 business days. Any charges or fees that may apply are subject to the terms and conditions of the withdrawal policy. Always ensure the withdrawal address is correct to avoid delays.",
+        "ErrorMakingWithdrawal": "An error occurred while processing your request. Please try again.",
+        "Snackbar": {
+            "Success": "Withdrawal request submitted successfully!",
+            "InsufficientFunds": "Insufficient funds. Please check your balance and try again.",
+            "InvalidAmount": "Invalid withdrawal amount. Please enter a valid amount."
+        }
+    },
+    "PaymentPage": {
+        "PayTo": "Recharge to the following Wallet",
+        "CopyWallet": "Copy Wallet Address",
+        "Done": "Payment Made",
+        "Upload": "Upload Payment Confirmation",
+        "File": "Confirmation Uploaded Successfully",
+        "Notice": "Note: Please ensure to upload a clear screenshot of the successful payment transaction. Failure to do so may result in the inability to credit the recharge amount to your account. The platform will not be held responsible for the loss of funds due to the unavailability of payment confirmation.",
+        "Finished": "Complete",
+        "Close": "Close",
+        "text1": "Ensure your payment details are correct before proceeding to avoid any delays or issues in recharging your wallet.",
+        "text2": "For security purposes, all transactions are encrypted. Please keep your payment information confidential to protect against unauthorized access.",
+        "text3": "If you encounter any issues during the payment process or need assistance, please contact our customer support. We are here to assist you 24/7.",
+        "snack1": "Success! Please wait for confirmation",
+        "snack2error": "failed. Please try again. Or contact support",
+        "copied": "Wallet address copied to clipboard!",
+        "copiedfail": "Failed to copy wallet address!"
+    },
+    "HomeComp": {
+        "Recharge": "Recharge",
+        "Withdraw": "Withdraw",
+        "Notifications": "Notifications",
+        "Invite": "Invite",
+        "personal": "Personal Finance",
+        "total": "Total Earnings",
+        "todays": "Today's Earnings",
+        "succesdepo": "Successful Deposit",
+        "successwith": "Successful Withdrawal",
+        "completed": "Completed Orders",
+        "completedorder": "Completed Order"
+    },
+    "TaskComp": {
+        "taskFrozen": "Task frozen due to timeout",
+        "taskCompleted": "Task completed successfully",
+        "errorCompletingTask": "Error completing task: {{error}}",
+        "unknownError": "Unknown error",
+        "additionalDepositRequired": "You need to deposit an additional ${{deposit}} to complete this task.",
+        "submitOrder": "Submit Order",
+        "price": "Price: ${{price}}",
+        "commission": "Commission: ${{commission}} ({{percentage}}%)",
+        "minutesSecondsFormat": "{{minutes}}:{{seconds}}"
+    },
+    "TaskTab": {
+        "pending": "Pending",
+        "completed": "Completed",
+        "locked": "Hold",
+        "price": "Price",
+        "Commission": "Commission",
+        "Completedon": "Order Submited at ",
+        "nodata": "No Data Available",
+        "unlock": "Unlock"
+    },
+    "RewardLevels": {
+        "Bronze1": "60 Products per day",
+        "Bronze2": "Access to basic features",
+        "Silver1": "80 Products per day",
+        "Silver2": "Higher commission",
+        "Silver3": "Exclusive content access",
+        "Silver4": "Early product releases",
+        "Gold1": "120 Products per day",
+        "Gold2": "Higher commission",
+        "Gold3": "Priority support",
+        "Gold4": "Special discounts",
+        "Platinum1": "160 Products per day",
+        "Platinum2": "Higher commission",
+        "Platinum3": "Access to Teams",
+        "Platinum4": "Premium 24/7 support",
+        "Platinum5": "Exclusive offers",
+        "Diamond1": "200 Products per day",
+        "Diamond2": "Higher commission",
+        "Diamond3": "Access to Teams",
+        "Diamond4": "Top priority support",
+        "Diamond5": "Exclusive events access"
+    },
+    "ChatComp": {
+        "Pagetitle": "Help",
+        "open": "We are open to chat 24/7",
+        "click": "Click Here to Chat",
+        "help": "How Can We Help?"
+    },
+    "login": {
+        "Pagetitle": "login",
+        "phoneNumber": "Phone Number",
+        "Password": "Password",
+        "captcha": "CAPTCHA",
+        "login": "LOGIN",
+        "Register": "Register",
+        "success": "Login successful ✔️",
+        "err": "Incorrect username or password"
+    },
+    "register": {
+        "Pagetitle": "Register",
+        "text1": "Welcome to Our World",
+        "text2": "Let's start something exciting. Create your account now.",
+        "phoneNumber": "Phone Number",
+        "email": "Email",
+        "first": "First Name",
+        "Last": "Last Name",
+        "Password": "Password",
+        "confirm": "Confirm Password",
+        "refferer": "Referral Code",
+        "captcha": "CAPTCHA"
+    }
+}

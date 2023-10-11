@@ -1,0 +1,24 @@
+.account-paper {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    /* Optional: light grey background for better visibility */
+}
+
+.account-avatar {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 2px solid #ddd;
+    /* Optional: adds a slight border to the avatar */
+}
+
+.account-header {
+    font-weight: bold;
+    /* Makes the user's name slightly bolder */
+}
+
+.account-info {
+    color: #777;
+    /* A softer color for user information */
+}

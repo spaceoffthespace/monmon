@@ -1,0 +1,142 @@
+.chat-container {
+    position: fixed;
+    width: 100%;
+    background-color: #eee;
+    color: #333;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.chat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-content:hover {
+    background-color: #ddd;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
+}
+
+.dot {
+    background-color: #333;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    animation: dot-loading 1.4s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes dot-loading {
+
+    0%,
+    80%,
+    100% {
+        transform: scaleY(0.4);
+        opacity: 0.5;
+    }
+
+    40% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.chat-icon {
+    font-size: 50px;
+    margin: 10px 0;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-content {
+    border: 2px solid #333;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+}
+
+.chat-text {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes fadeInOut {
+    0% {
+        border-color: rgba(67, 168, 255, 1);
+    }
+
+    50% {
+        border-color: rgba(67, 168, 255, 0.5);
+    }
+
+    100% {
+        border-color: rgba(67, 168, 255, 1);
+    }
+}
+
+.customer-support {
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.help-bubble {
+    position: absolute;
+    bottom: 150%;
+    right: 50%;
+    transform: translate(50%, 30px);
+    background-color: #43a8ff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    min-width: 100px;
+    /* You can adjust this value */
+    text-align: center;
+    /* Align the text to the center */
+}
+
+.support-image {
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    border: 2px solid #43a8ff;
+    object-fit: cover;
+}

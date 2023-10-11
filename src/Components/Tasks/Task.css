@@ -1,0 +1,9 @@
+.slide-container {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.slide {
+    flex: 1;
+    width: 100%;
+}

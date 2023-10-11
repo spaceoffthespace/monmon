@@ -1,0 +1,32 @@
+.notification-item {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification-title {
+    font-weight: 500;
+}
+
+.notification-content {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+.notification-icon-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    /* Or any desired size */
+    text-align: center;
+    margin-right: 10px;
+}
+
+.notification-content-container {
+    display: inline-block;
+    vertical-align: top;
+}

@@ -1,0 +1,69 @@
+/* ManageWallet.css */
+
+.manage-wallet-container {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.manage-wallet-heading {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.wallet-address {
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.wallet-address-value {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.no-wallet-address {
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+.manage-wallet-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manage-wallet-input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.manage-wallet-button {
+    background-color: #2196f3;
+    color: white;
+}
+
+.manage-wallet-button:hover {
+    background-color: #1976d2;
+}
+
+.manage-wallet-button:disabled {
+    background-color: #ccc;
+    color: #666;
+}
+
+.additional-info {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.info-text {
+    margin-bottom: 10px;
+    color: #666;
+}

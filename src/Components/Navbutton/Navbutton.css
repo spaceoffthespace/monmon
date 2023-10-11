@@ -1,0 +1,35 @@
+/* Navbutton.css */
+
+/* Container styles */
+.navbutton-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    /* Optional background color */
+    padding: 8px 16px;
+    /* Optional padding for spacing */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for depth */
+    width: 100%;
+    /* Take full width */
+}
+
+/* Styles for the arrow icon */
+.navbar-back {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for the text */
+.navbutton-title {
+    flex: 1;
+    /* Take available space in the center */
+    display: flex;
+    justify-content: center;
+}
+
+/* Optional styles for the right side elements */
+.navbutton-right {
+    /* Add styles for any additional elements you want to show on the right side */
+}

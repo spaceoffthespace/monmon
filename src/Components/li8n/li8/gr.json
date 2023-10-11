@@ -1,0 +1,248 @@
+{
+    "navbar": {
+        "home": "Startseite",
+        "recharge": "Aufladen",
+        "grab": "Erfassen",
+        "task": "Aufgabe",
+        "account": "Konto"
+    },
+    "tabs": {
+        "pending": "Ausstehend",
+        "settlement": "Abrechnung",
+        "settled": "Abgerechnet",
+        "frozen": "Gesperrt"
+    },
+    "invites": {
+        "inviteFriends": "Freunde einladen und Belohnungen verdienen!",
+        "inviteDescription": "Teilen Sie Ihren eindeutigen Empfehlungslink mit Freunden und Familie. Wenn sie sich über Ihren Link anmelden, erhalten Sie beide Belohnungen! Ihre Empfehlungen verdienen zusätzliche Provision, und Sie steigen mit aufregenden Boni auf. Lassen Sie uns zusammen wachsen!",
+        "linkCopied": "Link kopiert!",
+        "copyInviteLink": "Einladungslink kopieren",
+        "goBack": "Zurück"
+    },
+    "manageWalletPage": {
+        "manageWalletHeading": "Wallet-Adresse verwalten",
+        "noWalletAddressText": "Sie haben Ihre Wallet-Adresse noch nicht festgelegt. Bitte aktualisieren Sie sie unten:",
+        "updateWalletLabel": "Wallet-Adresse aktualisieren",
+        "updateWalletButton": "Wallet-Adresse aktualisieren",
+        "additionalInfoText1": "Zusätzliche Informationen zur Verwaltung Ihrer Wallet-Adresse können hier hinzugefügt werden.",
+        "additionalInfoText2": "Aus Sicherheitsgründen stellen Sie sicher, dass Sie Ihre Wallet-Adresse vertraulich behandeln.",
+        "snack1": "Die Wallet wurde erfolgreich aktualisiert!",
+        "snack2": "Die Wallet wurde erfolgreich aktualisiert!",
+        "snack3": "Sie können Ihre Lieferadresse nur alle 24 Stunden aktualisieren."
+    },
+    "accountPage": {
+        "pageTitle": "Konto",
+        "profileAvatarAltText": "Profil",
+        "phoneNumberLabel": "Telefonnummer",
+        "emailLabel": "E-Mail:",
+        "accountTypeLabel": "Kontoart"
+    },
+    "MenuAbout": {
+        "pageTitle": "Über uns"
+    },
+    "MenuSecurity": {
+        "pageTitle": "Sicherheit & Vertrauen"
+    },
+    "notifPage": {
+        "noName": "Benachrichtigungen",
+        "noNot": "Zurzeit sind keine Benachrichtigungen verfügbar.",
+        "transactionapproved": "Ihre Transaktion über {{amount}} wurde genehmigt.",
+        "transactiondenied": "Ihre Transaktion über {{amount}} wurde abgelehnt.",
+        "withdrawalapproved": "Ihre Abhebung von {{amount}} wurde genehmigt.",
+        "withdrawaldenied": "Ihr Auszahlungsantrag wurde abgelehnt. Bitte überprüfen Sie die Details und versuchen Sie es erneut."
+    },
+    "teamReport": {
+        "ReportName": "Team-Bericht",
+        "ReportNot": "Keine Daten für Team-Bericht verfügbar"
+    },
+    "Records": {
+        "Pagetitle": "Aufzeichnungen",
+        "nodata": "Keine Daten verfügbar",
+        "RecordText1": "Verlauf von Aufladungen und Abhebungen"
+    },
+    "TeamPage": {
+        "Pagetitle": "Teams",
+        "text1": "Team-Umsatz heute",
+        "text2": "Gesamteinnahmen des Teams",
+        "text3": "Von Team abgeschlossene Aufgaben",
+        "text4": "Gesperrte Aufgaben des Teams",
+        "text5": "Laufende Aufgaben",
+        "text6": "Betrag im Team-Hold",
+        "grab": "Erfassungsauftrag",
+        "chat": "Team-Chat",
+        "alert": "Teams sind für Ihren Kontotyp nicht verfügbar.",
+        "fineprnt1": "T1: Team-Einnahmen: Denken Sie daran, dass Aufgaben, die vom Team bewältigt werden, auch zum individuellen Wachstum beitragen. Gemeinsam als Einheit erreichen Sie mehr.",
+        "fineprnt2": "2: Aufgaben teilen: Wenn eine Team-Aufgabe erhalten wird, ist eine effiziente Zusammenarbeit entscheidend, um eine schnelle Erledigung und mögliche Verzögerungen zu vermeiden."
+    },
+    "AccountComp": {
+        "invitecode": " Einladungscode",
+        "copylink": "Kopieren",
+        "copiedLink": "Kopiert!",
+        "balance": "BALANCE",
+        "Withdraw": "Abheben",
+        "Recharge": "Aufladen",
+        "Teams": "Teams",
+        "Records": "Aufzeichnungen",
+        "ManageWallet": "Wallet verwalten",
+        "Invite": "Einladen",
+        "Revenue": "Einnahmen",
+        "TodayEarning": "Heutige",
+        "Totalearning": "Gesamte",
+        "HoldAmount": "Gesperrt",
+        "Menu_Account": "Konto",
+        "Menu_Notifications": "Benachrichtigungen",
+        "Menu_Records": "Aufzeichnungen",
+        "Menu_Invite": "Freunde einladen",
+        "Menu_Teams": "Team-Berichte",
+        "Menu_Secuirty": "Sicherheit",
+        "Menu_Aboutus": "Über uns",
+        "Menu_logout": "Ausloggen"
+    },
+    "GrabComp": {
+        "Pagetitle": "Erfassen",
+        "All": "Alle",
+        "PersonalEarnings": "Persönliche Einnahmen",
+        "CompletedOrders": "Abgeschlossene Aufträge",
+        "LockedOrders": "Gesperrte Aufträge",
+        "UnfinishedOrders": "Unvollendete Aufträge",
+        "Hold": "Gesperrt",
+        "CurrentBalance": "Aktueller Kontostand",
+        "Grab": "Erfassungsauftrag",
+        "text1": "1: Wie Sie verdienen: Jede Aufgabe hat ihre eigene Provision, die vom Wert der Aufgabe und Ihrem Kontostatus abhängt. Konten höherer Stufen bieten mehr Verdienstmöglichkeiten.",
+        "text2": "2: Das System sendet Aufgaben zufällig. Bearbeiten Sie sie so schnell wie möglich, nachdem Sie sie gefunden haben, um ständiges Warten zu vermeiden.",
+        "text3": "Wichtiger Hinweis: Jedes Mal, wenn Sie eine Aufgabe erhalten, werden ihre Details dem Händler mitgeteilt. Aufträge, die länger als eine Stunde ungelöst bleiben, werden vorübergehend eingefroren, zusammen mit den damit verbundenen Geldern, bis zur weiteren Klärung.",
+        "insufficientBalance": "Unzureichendes Guthaben, um eine Aufgabe zu übernehmen. Bitte laden Sie mindestens 20USD auf.",
+        "pendingTask": "Sie haben eine bestehende ausstehende Aufgabe. Bitte schließen Sie diese ab, bevor Sie eine neue übernehmen.",
+        "noTasksLeft": "Sie haben Ihr tägliches Limit für Bestellungen erreicht. Bitte upgraden Sie für mehr tägliche Aufgaben."
+    },
+    "RechargeComp": {
+        "Pagetitle": "Aufladen",
+        "RechargeAmount": "Aufladebetrag",
+        "HelperText": "Geben Sie den gewünschten Aufladebetrag ein oder wählen Sie ihn aus.",
+        "Currency": "Währung",
+        "Continue": "Weiter"
+    },
+    "WithdrawComp": {
+        "Pagetitle": "Abheben",
+        "title2": "Geld abheben",
+        "WithdrawAmount": "Abhebungsbetrag",
+        "BalanceText": "Verfügbarer Kontostand",
+        "DeliveryAddressText": "Bitte bestätigen Sie Ihre Lieferadresse",
+        "ConfirmWithdrawalButton": "Abhebung bestätigen",
+        "InsufficientBalanceError": "Unzureichendes Guthaben. Bitte geben Sie einen gültigen Abhebungsbetrag ein.",
+        "CurrencyLabel": "Währung",
+        "RequestWithdrawalButton": "Abhebung anfordern",
+        "InfoText1": "Bitte erlauben Sie bis zu 3 Werktagen für die Bearbeitung des Abhebungsauftrags.",
+        "InfoText2": "Bei Fragen oder Problemen wenden Sie sich bitte an unseren Support.",
+        "TasksNotCompleted": "Sie müssen alle verfügbaren Aufgaben für heute abschließen, bevor Sie abheben können.",
+        "FinePrint": "* Ihr Abhebungsauftrag wird innerhalb von 3 Werktagen bearbeitet. Etwaige anfallende Gebühren unterliegen den Geschäftsbedingungen der Abhebungspolitik. Stellen Sie immer sicher, dass die Abhebungsadresse korrekt ist, um Verzögerungen zu vermeiden.",
+        "ErrorMakingWithdrawal": "Beim Verarbeiten Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+        "Snackbar": {
+            "Success": "Abhebungsauftrag erfolgreich übermittelt!",
+            "InsufficientFunds": "Unzureichendes Guthaben. Bitte überprüfen Sie Ihren Kontostand und versuchen Sie es erneut.",
+            "InvalidAmount": "Ungültiger Abhebungsbetrag. Bitte geben Sie einen gültigen Betrag ein."
+        }
+    },
+    "PaymentPage": {
+        "PayTo": "Aufladen auf folgende Wallet",
+        "CopyWallet": "Wallet-Adresse kopieren",
+        "Done": "Zahlung abgeschlossen",
+        "Upload": "Zahlungsbestätigung hochladen",
+        "File": "Bestätigung erfolgreich hochgeladen",
+        "Notice": "Hinweis: Stellen Sie sicher, dass Sie einen klaren Screenshot der erfolgreichen Zahlungstransaktion hochladen. Andernfalls kann dies dazu führen, dass der Aufladebetrag nicht auf Ihr Konto gutgeschrieben wird. Die Plattform übernimmt keine Verantwortung für den Verlust von Mitteln aufgrund fehlender Zahlungsbestätigung.",
+        "Finished": "Fertig",
+        "Close": "Schließen",
+        "text1": "Stellen Sie sicher, dass Ihre Zahlungsdetails korrekt sind, bevor Sie fortfahren, um Verzögerungen oder Probleme bei der Aufladung Ihres Wallets zu vermeiden.",
+        "text2": "Aus Sicherheitsgründen werden alle Transaktionen verschlüsselt. Bitte halten Sie Ihre Zahlungsinformationen vertraulich, um sich vor unbefugtem Zugriff zu schützen.",
+        "text3": "Wenn Sie während des Zahlungsvorgangs Probleme haben oder Hilfe benötigen, wenden Sie sich bitte an unseren Kundensupport. Wir sind rund um die Uhr für Sie da.",
+        "snack1": "Erfolg! Bitte warten Sie auf die Bestätigung",
+        "snack2error": "Fehlgeschlagen. Bitte versuchen Sie es erneut. Oder kontaktieren Sie den Support",
+        "copied": "Wallet-Adresse in die Zwischenablage kopiert!",
+        "copiedfail": "Fehler beim Kopieren der Wallet-Adresse!"
+    },
+    "HomeComp": {
+        "Recharge": "Aufladen",
+        "Withdraw": "Abheben",
+        "Notifications": "Benachrichtigungen",
+        "Invite": "Einladen",
+        "personal": "Persönliche Finanzen",
+        "total": "Gesamteinnahmen",
+        "todays": "Heutige Einnahmen",
+        "succesdepo": "Erfolgreiche Einzahlung",
+        "successwith": "Erfolgreiche Abhebung",
+        "completed": "Abgeschlossene Aufträge",
+        "completedorder": "Abgeschlossene Bestellung"
+    },
+    "TaskComp": {
+        "taskFrozen": "Aufgabe aufgrund Zeitüberschreitung gesperrt",
+        "taskCompleted": "Aufgabe erfolgreich abgeschlossen",
+        "errorCompletingTask": "Fehler beim Abschließen der Aufgabe: {{error}}",
+        "unknownError": "Unbekannter Fehler",
+        "additionalDepositRequired": "Sie müssen eine zusätzliche {{deposit}} $ einzahlen, um diese Aufgabe abzuschließen.",
+        "submitOrder": "Bestellung abschicken",
+        "price": "Preis: {{price}} $",
+        "commission": "Provision: {{commission}} $ ({{percentage}}%)",
+        "minutesSecondsFormat": "{{minutes}}:{{seconds}}"
+    },
+    "TaskTab": {
+        "pending": "Ausstehend",
+        "completed": "Abgeschlossen",
+        "locked": "Gesperrt",
+        "price": "Preis",
+        "Commission": "Provision",
+        "Completedon": "Bestellung eingereicht um",
+        "nodata": "Keine Daten verfügbar",
+        "unlock": "Freischalten"
+    },
+    "RewardLevels": {
+        "Bronze1": "60 Produkte pro Tag",
+        "Bronze2": "Zugriff auf grundlegende Funktionen",
+        "Silver1": "80 Produkte pro Tag",
+        "Silver2": "Höhere Provision",
+        "Silver3": "Zugang zu exklusivem Inhalt",
+        "Silver4": "Frühe Veröffentlichungen von Produkten",
+        "Gold1": "120 Produkte pro Tag",
+        "Gold2": "Höhere Provision",
+        "Gold3": "Prioritätssupport",
+        "Gold4": "Sonderangebote",
+        "Platinum1": "160 Produkte pro Tag",
+        "Platinum2": "Höhere Provision",
+        "Platinum3": "Zugang zu Teams",
+        "Platinum4": "Premium 24/7 Support",
+        "Platinum5": "Exklusive Angebote",
+        "Diamond1": "200 Produkte pro Tag",
+        "Diamond2": "Höhere Provision",
+        "Diamond3": "Zugang zu Teams",
+        "Diamond4": "Höchste Priorität beim Support",
+        "Diamond5": "Zugang zu exklusiven Veranstaltungen"
+    },
+    "ChatComp": {
+        "Pagetitle": "Hilfe",
+        "open": "Wir sind rund um die Uhr für Sie da",
+        "click": "Klicken Sie hier, um zu chatten",
+        "help": "Wie können wir Ihnen helfen?"
+    },
+    "login": {
+        "Pagetitle": "Anmelden",
+        "phoneNumber": "Telefonnummer",
+        "Password": "Passwort",
+        "captcha": "CAPTCHA",
+        "login": "ANMELDEN",
+        "Register": "Registrieren",
+        "success": "Anmeldung erfolgreich ✔️",
+        "err": "Falscher Benutzername oder Passwort"
+    },
+    "register": {
+        "Pagetitle": "Registrieren",
+        "text1": "Willkommen in unserer Welt",
+        "text2": "Lassen Sie uns etwas Aufregendes beginnen. Erstellen Sie jetzt Ihr Konto.",
+        "phoneNumber": "Telefonnummer",
+        "email": "E-Mail",
+        "first": "Vorname",
+        "Last": "Nachname",
+        "Password": "Passwort",
+        "confirm": "Passwort bestätigen",
+        "refferer": "Empfehlungscode",
+        "captcha": "CAPTCHA"
+    }
+}

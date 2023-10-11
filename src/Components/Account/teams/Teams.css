@@ -1,0 +1,52 @@
+.teams-rectangle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    background: linear-gradient(110deg, #f54291, #f56767);
+    /* Adjusted gradient for teams */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.teams-section {
+    text-align: center;
+    color: #fff;
+}
+
+.teams-section>* {
+    margin-bottom: 10px;
+}
+
+.teams-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.teams-disclaimer {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 79px;
+}
+
+.teams-disclaimer-text {
+    color: #777;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+}
+
+.teams-buttons {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    /* Add vertical spacing above and below the buttons */
+}
+
+.teams-button {
+    padding: 10px 20px;
+    font-weight: bold;
+}

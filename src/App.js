@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+import Navbar from './Components/Navbar/Navbar';
+import i18n from './Components/li8n/li8n';
+import './App.css'
+import { Routes, Route } from "react-router-dom";
+import { AuthContext } from './Components/Context/AuthContext';
+import LoginPage from './Components/Login/LoginPage';
+import RegistrationPage from './Components/Login/Register/Register';
+import ProtectedRoute from './Components/utils/ProtectedRoute/ProtectedRoute';
+import ManageWallet from './Components/Account/Manage/ManageWallet';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/login' element={<LoginPage />} />
+      <Route path='/register/:ref_code' element={<RegistrationPage />} />
+      <Route path='/register' element={<RegistrationPage />} />
+      <Route path='/' element={<ProtectedRoute element={<Navbar />} />} />
+      <Route path='/manage-wallet' element={<ProtectedRoute element={<ManageWallet />} />} />
+      {/* More of your protected routes can go here */}
+    </Routes>
   );
-}
+};
 
 export default App;

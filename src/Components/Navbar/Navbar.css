@@ -1,0 +1,79 @@
+.navbar-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    z-index: 10;
+}
+
+.navbar-tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-tab {
+    cursor: pointer;
+
+    position: relative;
+}
+
+.content-container {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    padding-top: 1px;
+}
+
+.navbar-plus-icon {
+    font-size: 40px;
+    background-color: #ffffff;
+    /* Making circle white */
+    border: 3px solid #eff2f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -10px;
+}
+
+.navbar-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.navbar-tab span {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* This will color the "+" icon blue always */
+.navbar-tab .navbar-plus-icon svg {
+    color: #43a8ff;
+}
+
+.navbar-tab.active .navbar-icon,
+.navbar-tab.active .navbar-icon svg,
+.navbar-tab.active span {
+    color: #43a8ff;
+    /* Active color */
+}
+
+
+.navbar-tab.active .navbar-plus-icon {
+    border-color: #43a8ff;
+    /* This will make the circle's border active color when tab is active */
+}

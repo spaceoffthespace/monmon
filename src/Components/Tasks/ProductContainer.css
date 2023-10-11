@@ -1,0 +1,90 @@
+/* Product.css */
+.product {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.product:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    flex: 1;
+    width: auto;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+}
+
+.product-title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #6b3c31;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+
+
+.product-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+
+.snackbar-custom {
+    display: flex;
+    justify-content: center;
+}
+
+
+.alert-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

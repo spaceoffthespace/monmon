@@ -1,0 +1,65 @@
+.honor-roll-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.honor-roll-wrapper {
+    height: 100%;
+    animation: scrollAnimation 20s infinite linear forwards;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.user-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.honor-profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-details {
+    margin-left: 10px;
+}
+
+.user-action,
+.user-amount {
+    margin-bottom: 5px;
+}
+
+.user-amount {
+    margin-left: 55px;
+    color: rgb(67, 168, 255);
+    font-size: 18px;
+    /* Adjust the font size as per your preference */
+    text-align: right;
+    flex-grow: 1;
+}

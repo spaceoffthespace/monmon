@@ -1,0 +1,248 @@
+{
+    "navbar": {
+        "home": "Accueil",
+        "recharge": "Recharger",
+        "grab": "Saisir",
+        "task": "Tâche",
+        "account": "Compte"
+    },
+    "tabs": {
+        "pending": "En attente",
+        "settlement": "Règlement",
+        "settled": "Réglé",
+        "frozen": "Gelé"
+    },
+    "invites": {
+        "inviteFriends": "Invitez des amis et gagnez des récompenses !",
+        "inviteDescription": "Partagez votre lien de parrainage unique avec vos amis et votre famille. Lorsqu'ils s'inscrivent en utilisant votre lien, vous recevez tous les deux des récompenses ! Vos références gagnent une commission supplémentaire, et vous montez en niveau avec des bonus passionnants. Grandissons ensemble !",
+        "linkCopied": "Lien copié !",
+        "copyInviteLink": "Copier le lien de parrainage",
+        "goBack": "Retour"
+    },
+    "manageWalletPage": {
+        "manageWalletHeading": "Gérer l'adresse du portefeuille",
+        "noWalletAddressText": "Vous n'avez pas encore défini votre adresse de portefeuille. Veuillez la mettre à jour ci-dessous :",
+        "updateWalletLabel": "Mettre à jour l'adresse du portefeuille",
+        "updateWalletButton": "Mettre à jour l'adresse du portefeuille",
+        "additionalInfoText1": "Des informations supplémentaires sur la gestion de votre adresse de portefeuille peuvent être ajoutées ici.",
+        "additionalInfoText2": "Pour des raisons de sécurité, assurez-vous de garder votre adresse de portefeuille confidentielle.",
+        "snack1": "Le portefeuille a été mis à jour avec succès !",
+        "snack2": "Le portefeuille a été mis à jour avec succès !",
+        "snack3": "Vous ne pouvez mettre à jour votre adresse de livraison qu'une fois toutes les 24 heures."
+    },
+    "accountPage": {
+        "pageTitle": "Compte",
+        "profileAvatarAltText": "Profil",
+        "phoneNumberLabel": "Numéro de téléphone",
+        "emailLabel": "Email :",
+        "accountTypeLabel": "Type de compte"
+    },
+    "MenuAbout": {
+        "pageTitle": "À propos de nous"
+    },
+    "MenuSecurity": {
+        "pageTitle": "Sécurité et Confiance Mutuelle"
+    },
+    "notifPage": {
+        "noName": "Notifications",
+        "noNot": "Aucune notification disponible pour le moment.",
+        "transactionapproved": "Votre transaction de {{amount}} a été approuvée.",
+        "transactiondenied": "Votre transaction de {{amount}} a été refusée.",
+        "withdrawalapproved": "Votre retrait de {{amount}} a été approuvé.",
+        "withdrawaldenied": "Votre demande de retrait a été refusée. Veuillez vérifier les détails et réessayer."
+    },
+    "teamReport": {
+        "ReportName": "Rapport d'équipe",
+        "ReportNot": "Aucune donnée de rapport d'équipe disponible"
+    },
+    "Records": {
+        "Pagetitle": "Historique",
+        "nodata": "Aucune donnée disponible",
+        "RecordText1": "Historique des recharges et des retraits"
+    },
+    "TeamPage": {
+        "Pagetitle": "Équipes",
+        "text1": "Revenu de l'équipe aujourd'hui",
+        "text2": "Gains totaux de l'équipe",
+        "text3": "Tâches accomplies par l'équipe",
+        "text4": "Tâches verrouillées de l'équipe",
+        "text5": "Tâches en cours",
+        "text6": "Montant en attente de l'équipe",
+        "grab": "Commande de saisie",
+        "chat": "Chat d'équipe",
+        "alert": "Les équipes ne sont pas disponibles pour votre type de compte.",
+        "fineprnt1": "T1 : Gains de l'équipe : Rappelez-vous que les tâches effectuées par l'équipe contribuent également à la croissance individuelle. Ensemble, en tant qu'unité, vous réalisez davantage.",
+        "fineprnt2": "2 : Partage des tâches : Lorsqu'une tâche d'équipe est obtenue, il est essentiel de collaborer efficacement pour assurer une achèvement rapide et éviter d'éventuels retards."
+    },
+    "AccountComp": {
+        "invitecode": " code de parrainage",
+        "copylink": "Copier",
+        "copiedLink": "Copié !",
+        "balance": "SOLDE",
+        "Withdraw": "Retrait",
+        "Recharge": "Recharger",
+        "Teams": "Équipes",
+        "Records": "Historique",
+        "ManageWallet": "Gérer le portefeuille",
+        "Invite": "Inviter",
+        "Revenue": "Revenu",
+        "TodayEarning": "Revenu d'aujourd'hui",
+        "Totalearning": "Revenu total",
+        "HoldAmount": "Montant en attente",
+        "Menu_Account": "Compte",
+        "Menu_Notifications": "Notifications",
+        "Menu_Records": "Historique",
+        "Menu_Invite": "Inviter des amis",
+        "Menu_Teams": "Rapports d'équipe",
+        "Menu_Secuirty": "Sécurité",
+        "Menu_Aboutus": "À propos de nous",
+        "Menu_logout": "Déconnexion"
+    },
+    "GrabComp": {
+        "Pagetitle": "Saisir",
+        "All": "Tout",
+        "PersonalEarnings": "Gains personnels",
+        "CompletedOrders": "Commandes terminées",
+        "LockedOrders": "Commandes verrouillées",
+        "UnfinishedOrders": "Commandes non terminées",
+        "Hold": "En attente",
+        "CurrentBalance": "Solde actuel",
+        "Grab": "Commande de saisie",
+        "text1": "1 : Comment vous gagnez : Chaque tâche est associée à sa propre commission, déterminée par la valeur de la tâche et votre statut de compte. Les comptes de niveau supérieur ont accès à de meilleures opportunités de gains.",
+        "text2": "2 : Le système envoie les tâches de manière aléatoire. Complétez-les dès que possible après les avoir associées, afin d'éviter de rester en attente tout le temps.",
+        "text3": "Note : Chaque fois que vous obtenez une tâche, ses détails sont partagés avec le marchand. Les commandes non résolues depuis plus d'une heure sont temporairement gelées, avec les fonds associés à la tâche, en attendant des éclaircissements ultérieurs.",
+        "insufficientBalance": "Solde insuffisant pour saisir une tâche. Veuillez recharger un minimum de 20USD.",
+        "pendingTask": "Vous avez une tâche en attente existante. Veuillez la compléter avant d'en saisir une nouvelle.",
+        "noTasksLeft": "Vous avez atteint votre limite quotidienne de commandes, veuillez mettre à niveau pour plus de tâches quotidiennes."
+    },
+    "RechargeComp": {
+        "Pagetitle": "Recharger",
+        "RechargeAmount": "Montant de la recharge",
+        "HelperText": "Entrez ou sélectionnez le montant de recharge souhaité.",
+        "Currency": "Devise",
+        "Continue": "Continuer"
+    },
+    "WithdrawComp": {
+        "Pagetitle": "Retrait",
+        "title2": "Retirer des fonds",
+        "WithdrawAmount": "Montant du retrait",
+        "BalanceText": "Solde disponible",
+        "DeliveryAddressText": "Veuillez confirmer votre adresse de livraison",
+        "ConfirmWithdrawalButton": "Confirmer le retrait",
+        "InsufficientBalanceError": "Solde insuffisant. Veuillez saisir un montant de retrait valide.",
+        "CurrencyLabel": "Devise",
+        "RequestWithdrawalButton": "Demander le retrait",
+        "InfoText1": "Veuillez prévoir jusqu'à 3 jours ouvrables pour le traitement de la demande de retrait.",
+        "InfoText2": "Pour toute question ou problème, veuillez contacter notre équipe d'assistance.",
+        "TasksNotCompleted": "Vous devez terminer toutes les tâches disponibles pour aujourd'hui avant de pouvoir effectuer un retrait.",
+        "FinePrint": "* Votre demande de retrait sera traitée dans un délai de 3 jours ouvrables. Toutes les frais éventuels sont soumis aux conditions de la politique de retrait. Assurez-vous toujours que l'adresse de retrait est correcte pour éviter les retards.",
+        "ErrorMakingWithdrawal": "Une erreur s'est produite lors du traitement de votre demande. Veuillez réessayer.",
+        "Snackbar": {
+            "Success": "Demande de retrait soumise avec succès !",
+            "InsufficientFunds": "Fonds insuffisants. Veuillez vérifier votre solde et réessayer.",
+            "InvalidAmount": "Montant de retrait invalide. Veuillez saisir un montant valide."
+        }
+    },
+    "PaymentPage": {
+        "PayTo": "Recharger vers le portefeuille suivant",
+        "CopyWallet": "Copier l'adresse du portefeuille",
+        "Done": "Paiement effectué",
+        "Upload": "Télécharger la confirmation de paiement",
+        "File": "Téléchargement réussi de la confirmation",
+        "Notice": "Remarque : veuillez vous assurer de télécharger une capture d'écran claire de la transaction de paiement réussie. À défaut, cela pourrait entraîner l'incapacité à créditer le montant de recharge sur votre compte. La plateforme ne sera pas tenue responsable de la perte de fonds en raison de l'absence de confirmation de paiement.",
+        "Finished": "Terminé",
+        "Close": "Fermer",
+        "text1": "Assurez-vous que vos informations de paiement sont correctes avant de continuer pour éviter tout retard ou problème lors de la recharge de votre portefeuille.",
+        "text2": "Pour des raisons de sécurité, toutes les transactions sont cryptées. Veuillez garder confidentielles vos informations de paiement pour vous protéger contre tout accès non autorisé.",
+        "text3": "Si vous rencontrez des problèmes lors du processus de paiement ou si vous avez besoin d'aide, veuillez contacter notre service client. Nous sommes là pour vous aider 24/7.",
+        "snack1": "Succès ! Veuillez patienter pour la confirmation",
+        "snack2error": "Échec. Veuillez réessayer. Ou contactez le support",
+        "copied": "Adresse du portefeuille copiée dans le presse-papiers !",
+        "copiedfail": "Échec de la copie de l'adresse du portefeuille !"
+    },
+    "HomeComp": {
+        "Recharge": "Recharger",
+        "Withdraw": "Retrait",
+        "Notifications": "Notifications",
+        "Invite": "Inviter",
+        "personal": "Finances personnelles",
+        "total": "Gains totaux",
+        "todays": "Gains d'aujourd'hui",
+        "succesdepo": "Dépôt réussi",
+        "successwith": "Retrait réussi",
+        "completed": "Commandes terminées",
+        "completedorder": "Commande terminée"
+    },
+    "TaskComp": {
+        "taskFrozen": "Tâche gelée en raison du délai d'attente",
+        "taskCompleted": "Tâche terminée avec succès",
+        "errorCompletingTask": "Erreur lors de la réalisation de la tâche : {{error}}",
+        "unknownError": "Erreur inconnue",
+        "additionalDepositRequired": "Vous devez déposer un montant supplémentaire de {{deposit}} $ pour terminer cette tâche.",
+        "submitOrder": "Soumettre la commande",
+        "price": "Prix : {{price}} $",
+        "commission": "Commission : {{commission}} ({{percentage}} %)",
+        "minutesSecondsFormat": "{{minutes}}:{{seconds}}"
+    },
+    "TaskTab": {
+        "pending": "En attente",
+        "completed": "Terminée",
+        "locked": "Verrouillée",
+        "price": "Prix",
+        "Commission": "Commission",
+        "Completedon": "Commande soumise à ",
+        "nodata": "Aucune donnée disponible",
+        "unlock": "Déverrouiller"
+    },
+    "RewardLevels": {
+        "Bronze1": "60 produits par jour",
+        "Bronze2": "Accès aux fonctionnalités de base",
+        "Silver1": "80 produits par jour",
+        "Silver2": "Commission plus élevée",
+        "Silver3": "Accès au contenu exclusif",
+        "Silver4": "Lancements de produits anticipés",
+        "Gold1": "120 produits par jour",
+        "Gold2": "Commission plus élevée",
+        "Gold3": "Support prioritaire",
+        "Gold4": "Remises spéciales",
+        "Platinum1": "160 produits par jour",
+        "Platinum2": "Commission plus élevée",
+        "Platinum3": "Accès aux équipes",
+        "Platinum4": "Support premium 24/7",
+        "Platinum5": "Offres exclusives",
+        "Diamond1": "200 produits par jour",
+        "Diamond2": "Commission plus élevée",
+        "Diamond3": "Accès aux équipes",
+        "Diamond4": "Support en priorité",
+        "Diamond5": "Accès à des événements exclusifs"
+    },
+    "ChatComp": {
+        "Pagetitle": "Aide",
+        "open": "Nous sommes disponibles pour discuter 24/7",
+        "click": "Cliquez ici pour discuter",
+        "help": "Comment pouvons-nous vous aider ?"
+    },
+    "login": {
+        "Pagetitle": "connexion",
+        "phoneNumber": "Numéro de téléphone",
+        "Password": "Mot de passe",
+        "captcha": "CAPTCHA",
+        "login": "CONNEXION",
+        "Register": "S'inscrire",
+        "success": "Connexion réussie ✔️",
+        "err": "Nom d'utilisateur ou mot de passe incorrect"
+    },
+    "register": {
+        "Pagetitle": "S'inscrire",
+        "text1": "Bienvenue dans notre monde",
+        "text2": "Commençons quelque chose d'excitant. Créez votre compte dès maintenant.",
+        "phoneNumber": "Numéro de téléphone",
+        "email": "Email",
+        "first": "Prénom",
+        "Last": "Nom de famille",
+        "Password": "Mot de passe",
+        "confirm": "Confirmez le mot de passe",
+        "refferer": "Code de parrainage",
+        "captcha": "CAPTCHA"
+    }
+}

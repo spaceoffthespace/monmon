@@ -1,0 +1,199 @@
+.recharge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+
+.recharge-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.recharge-options button {
+    margin: 10px;
+    background-color: #eff1f3;
+    color: rgb(5, 2, 2);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.payment-method-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+    overflow: hidden;
+}
+
+.payment-method-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-method-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method-option {
+    background-color: white;
+    border: 2px solid rgb(67, 168, 255);
+    padding: 4px;
+    border-radius: 8px;
+    width: 64px;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-method-text2 {
+    color: #43a8ff;
+}
+
+/* Added Styles */
+.payment-method-container>div {
+    width: 100%;
+    /* Make sure the child div takes full width */
+}
+
+.MuiFormControl-root {
+    /* ... existing styles ... */
+    border-radius: 6px;
+    /* Add this to match the parent border-radius */
+    overflow: hidden;
+    /* Add this */
+}
+
+.MuiFormControl-root {
+    margin: 0;
+    /* Reset margin */
+    padding: 0;
+    /* Reset padding */
+    width: 100%;
+    /* Ensure it takes the full width */
+}
+
+.MuiSelect-root {
+    border-radius: 6px;
+}
+
+
+.continue-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.continue-btn button {
+    padding: 10px 20px;
+    background-color: #43a8ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.recharge-input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.payment-method-option {
+    position: relative;
+    /* your existing styles... */
+}
+
+.check-mark-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    /* Adjust these values to make the triangle smaller */
+    border-color: transparent #43a8ff transparent transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+    /* Added rotation */
+}
+
+.check-mark {
+    color: white;
+    font-size: 12px;
+    /* Reduced font size */
+    position: relative;
+    /* Changed from absolute to relative */
+}
+
+.payment-method-option.selected {
+    background-color: #e6f7ff;
+    border: 3px solid #0077b6;
+}
+
+.payment-method-option.selected {
+    background-color: #e6f7ff !important;
+    border: 3px solid #0077b6 !important;
+}
+
+.text-stroke {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+/* Add this to your CSS or styles file */
+.custom-card {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adding a subtle shadow for depth */
+    transition: transform 0.2s ease-in-out;
+    /* for a hover effect */
+    border-radius: 10px;
+    /* Rounded corners for a modern look */
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    /* Subtle hover effect to indicate interactivity */
+}
+
+.text-stroke {
+    font-weight: 600;
+    /* Making the text slightly bold can help in better legibility */
+}
+
+.ul-rewards {
+    padding-left: 20px;
+}
+
+.ul-rewards-list {
+    list-style-type: circle;
+    margin-bottom: 8px;
+    font-weight: 500;
+}

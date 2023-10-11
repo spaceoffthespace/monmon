@@ -1,0 +1,63 @@
+.slick-dots {
+    text-align: center;
+}
+
+/* Style individual dots */
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+}
+
+/* Style the active dot */
+.slick-dots li.slick-active button {
+    background-color: #333;
+    /* Change this to the color you prefer */
+}
+
+.slider-item {
+    width: calc(33.33% - 10px);
+    /* Approximate 1/3 width, minus padding */
+    height: auto;
+    /* Let the image define the height */
+    padding: 0;
+    /* A little space around each item */
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+}
+
+.image-container img {
+    max-width: 100%;
+    /* Ensure images don’t exceed the container’s width */
+    height: auto;
+    /* Maintain the aspect ratio */
+    object-fit: cover;
+    /* Cover the whole area of the container */
+    border-radius: 10px;
+    border: 2px solid #43a8ff;
+    display: block;
+    /* Remove inline block spacing */
+    margin: auto;
+    /* Center the image */
+}
+
+
+.slider-container {
+    margin-bottom: 0px;
+    /* or any other value */
+}
+
+.slider-slider {
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (max-width: 320px) {
+    .image-container img {
+        width: auto;
+        /* Let it take natural width */
+        max-width: 100%;
+        /* Will not exceed the container’s width */
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,62 @@
+/* Withdraw.css */
+
+
+.withdraw-heading {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-text {
+    color: #888;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.withdraw-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    /* Add a subtle border around the section */
+    border: 1px solid #ccc;
+}
+
+/* Add red background and extra spacing if confirming delivery address */
+.withdraw-form.confirming {
+    background-color: #ffcccc;
+    margin-bottom: 30px;
+}
+
+.withdraw-input {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.withdraw-button,
+.withdraw-confirm-button {
+    width: 100%;
+}
+
+.withdraw-info {
+    padding: 20px;
+    color: #777;
+    font-size: 0.8rem;
+    text-align: center;
+
+}
+
+.withdraw-fine-print {
+    padding: 20px;
+    color: #777;
+    font-size: 0.7rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.confirm-delivery-address {
+    background-color: #ffcccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

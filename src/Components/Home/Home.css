@@ -1,0 +1,208 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  height: 200vh;
+}
+
+.logo-home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Distribute items evenly */
+  width: 100%;
+  /* Ensure it takes the full width */
+  max-width: 400px;
+  /* Set a max width for the logo container */
+}
+
+
+.logo-image {
+  width: 100px;
+}
+
+.sup-image {
+  top: 0px;
+
+  width: 50px;
+  left: 10px;
+  position: absolute;
+}
+
+.image-spot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-height: 30vh;
+  overflow: hidden;
+  background-color: rgb(34, 194, 194);
+  /* Set a specific aspect ratio for the container */
+  aspect-ratio: 16/9;
+}
+
+.image-spot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-spot.fade-in {
+  opacity: 1;
+}
+
+.image-spot.fade-out {
+  opacity: 0;
+}
+
+.language-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.announcement-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+}
+
+.announcement-text {
+  padding-left: 5px;
+  flex-grow: 1;
+}
+
+.honor-roll-main-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+
+
+
+}
+
+
+
+
+.home-balance-main-container {
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-radius: 55px;
+
+}
+
+
+
+
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.button-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.notif-image-container {
+  position: relative;
+}
+
+.unread-home-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  /* setting badge to red */
+  color: white;
+  border-radius: 50%;
+  padding: 0.3em 0.5em;
+}
+
+.button-image {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.button-text {
+  font-size: 14px;
+}
+
+.unread-home-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  transform: translate(50%, -50%);
+  /* This will center the badge over the corner */
+  z-index: 10;
+  /* Ensure badge appears above other content */
+}
+
+.notif-image-container {
+  position: relative;
+  display: inline-block;
+  /* This will ensure the container doesn't stretch full width */
+}
+
+
+.product-main-container {
+  overflow: hidden;
+  /* Hide overflow content */
+  width: 100%;
+  /* Set the container width to 100% */
+  position: relative;
+  /* Ensure it stays within its parent */
+  touch-action: pan-y;
+  /* Allow vertical touch scrolling */
+
+  height: auto;
+
+}
+
+.product-main-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  /* Set your desired height for the image container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  /* Add margin to create spacing between image containers */
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* Adjust to "cover" or "contain" as needed */
+}
+
+.slick-slide {
+  padding: 0 10px;
+  /* Adjust the padding value as needed */
+}

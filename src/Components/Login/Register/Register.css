@@ -1,0 +1,94 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(58, 141, 255, 1) 0%, rgba(134, 185, 255, 1) 100%);
+    font-family: 'Arial', sans-serif;
+
+    background-image: url('../../../Components/assets/ecommerce_background_shopping_design_elements_icons_6838055.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.register-container h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.captcha-register-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.register-container h1,
+.register-container .MuiTypography-root {
+    padding: 5px 20px;
+    /* Add some padding */
+    background-color: rgb(255, 255, 255);
+    /* Semi-transparent white background */
+    border-radius: 5px;
+    /* Rounded edges */
+}
+
+.captcha-image {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.captcha-input {
+    flex-grow: 1;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+    /* Slightly increase width for better presentation */
+    padding: 30px 20px;
+
+    /* More padding to give breathing room to contents */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow for depth */
+}
+
+.register-container form .MuiTextField-root {
+    width: 100%;
+}
+
+.register-container form button {
+    width: 100%;
+    padding: 10px 0;
+    /* Make button a little thicker */
+    transition: background-color 0.2s;
+    /* Transition for smooth hover effect */
+}
+
+.register-container form button:hover {
+    background-color: rgba(58, 141, 255, 0.85);
+    /* Slightly lighten button color on hover */
+}
+
+.fullWidthSnackbar {
+    width: 100% !important;
+    /* Force it to be full-width */
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* In your CSS file */
+.PhoneInputInput {
+    display: none !important;
+    /* or you can use 'visibility: hidden !important;' */
+}
