@@ -44,23 +44,36 @@ const AuthProvider = ({ children }) => {
 
             const data = await response.json();
 
-            if (response.status === 200) {
+            if (response.ok) {
                 setAuthTokens(data);
                 setUser(jwt_decode(data.access));
                 localStorage.setItem('authTokens', JSON.stringify(data));
                 navigate('/');
-                // Set the success message for the Snackbar
-                setSnackbarMessage(t('login.success'))
+                setSnackbarMessage(t('login.success'));
                 setSnackbarSeverity('success');
-                setSnackbarOpen(true);
             } else {
-                // Handle errors based on the returned response (e.g. CAPTCHA errors)
-                setSnackbarMessage(data.detail || (t('login.err')));
+                // Mapping of server error details to translation keys
+                const errorMapping = {
+                    'Invalid CAPTCHA': 'login.invcaptcha',
+                    'Invalid credentials': 'login.invalidCredentials'
+                };
+
+                const errorTranslationKey = errorMapping[data.detail];
+
+                if (errorTranslationKey) {
+                    setSnackbarMessage(t(errorTranslationKey));
+                } else {
+                    setSnackbarMessage(t('errors.generic')); // generic error translation key for unexpected errors
+                }
+
                 setSnackbarSeverity('error');
-                setSnackbarOpen(true);
             }
         } catch (error) {
             console.error(error);
+            setSnackbarMessage(t('errors.unknown')); // translation key for unexpected errors
+            setSnackbarSeverity('error');
+        } finally {
+            setSnackbarOpen(true);
         }
     };
 

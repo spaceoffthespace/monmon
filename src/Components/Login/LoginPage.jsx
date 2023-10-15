@@ -2,6 +2,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../Context/AuthContext';
 import './LoginPage.css';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom'; // import Link from react-router-dom
@@ -14,6 +17,8 @@ const LoginPage = () => {
     const [captchaImage, setCaptchaImage] = useState('');
     const [captchaResponse, setCaptchaResponse] = useState('');
     const { t } = useTranslation(); // Initialize the translation hook
+    const [openSnackbar, setOpenSnackbar] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
 
     const Url = process.env.REACT_APP_API_URL;
@@ -29,29 +34,62 @@ const LoginPage = () => {
             .catch(error => {
                 console.error("Error fetching captcha:", error);
             });
-    }, []);
+        }, []);
 
-    const handleLoginSubmit = async (e) => {
-        e.preventDefault();
-
-        const payload = {
-            username: e.target.username.value,
-            password: e.target.password.value,
-            captcha_key: captchaKey,
-            captcha_response: captchaResponse
+        const mapErrorToTranslationKey = (errorMessage) => {
+            console.log('Backend Error Message:', errorMessage); // Log the original error message
+        
+            const errorMapping = {
+                "Invalid CAPTCHA": "invcaptcha",
+                "Invalid credentials": "invalidCredentials"
+                // ... add other errors as needed
+            };
+        
+            const translationKey = errorMapping[errorMessage] || "genericError";
+            console.log('Mapped Translation Key:', translationKey); // Log the mapped translation key
+        
+            return translationKey;
         };
+        
 
-        try {
-            const ipResponse = await axios.get('https://ipinfo.io/ip');
-            const clientIP = ipResponse.data;
+        const handleLoginSubmit = async (e) => {
+    e.preventDefault();
 
-            payload.login_ip = clientIP;
-
-            loginUser(payload);
-        } catch (error) {
-            console.error("Error:", error);
-        }
+    const payload = {
+        username: e.target.username.value,
+        password: e.target.password.value,
+        captcha_key: captchaKey,
+        captcha_response: captchaResponse
     };
+
+    try {
+        const ipResponse = await axios.get('https://ipinfo.io/ip');
+        const clientIP = ipResponse.data.trim();
+
+        payload.login_ip = clientIP;
+
+        await loginUser(payload);
+    } catch (error) {
+        if (error && error.json) {
+            error.json().then((errorData) => {
+                const errorKey = mapErrorToTranslationKey(errorData.detail);
+                setErrorMessage(t(errorKey));
+            });
+        } else {
+            setErrorMessage(t('genericError'));
+        }
+
+        setOpenSnackbar(true);
+    }
+};
+
+ 
+    
+    const handleCloseSnackbar = () => {
+        setOpenSnackbar(false);
+    };
+
+
 
     const [language, setLanguage] = useState(() => {
         // Restore the language option from local storage if present, otherwise default to 'en'
@@ -66,6 +104,7 @@ const LoginPage = () => {
         i18n.changeLanguage(language);
         localStorage.setItem('language', language);
     }, [language]);
+
 
     return (
         <div className="login-container">
@@ -100,7 +139,7 @@ const LoginPage = () => {
                     <img src={captchaImage} alt="CAPTCHA" className="captcha-image" />
                     <TextField 
                         label="Enter CAPTCHA"
-                        variant="outlined"
+                        variant="filled"
                         value={captchaResponse}
                         onChange={e => setCaptchaResponse(e.target.value)}
                         className="login-input captcha-input"
@@ -111,6 +150,11 @@ const LoginPage = () => {
                 <Button variant="outlined" className="register-button" component={Link} to="/register">
                 {t('login.Register')}</Button>
             </form>
+            <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+                <Alert onClose={handleCloseSnackbar} severity="error">
+                    {errorMessage}
+                </Alert>
+            </Snackbar>
         </div>
     )
 }

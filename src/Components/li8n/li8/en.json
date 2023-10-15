@@ -49,7 +49,8 @@
         "transactionapproved": "Your transaction of {{amount}} has been approved.",
         "transactiondenied": "Your transaction of {{amount}} has been denied.",
         "withdrawalapproved": "Your withdrawal of {{amount}} has been approved.",
-        "withdrawaldenied": "Your withdrawal request has been denied. Please check the details and try again."
+        "withdrawaldenied": "Your withdrawal request has been denied. Please check the details and try again.",
+        "welcometoourplatform!": "We're excited to have you on board. Explore and enjoy our features."
     },
     "teamReport": {
         "ReportName": "Team Report",
@@ -223,14 +224,15 @@
         "help": "How Can We Help?"
     },
     "login": {
-        "Pagetitle": "login",
+        "Pagetitle": "Login",
         "phoneNumber": "Phone Number",
         "Password": "Password",
-        "captcha": "CAPTCHA",
+        "captcha": "Enter CAPTCHA",
         "login": "LOGIN",
         "Register": "Register",
         "success": "Login successful ✔️",
-        "err": "Incorrect username or password"
+        "invcaptcha": "Invalid CAPTCHA",
+        "invalidCredentials": "Incorrect username or password"
     },
     "register": {
         "Pagetitle": "Register",
@@ -243,6 +245,12 @@
         "Password": "Password",
         "confirm": "Confirm Password",
         "refferer": "Referral Code",
-        "captcha": "CAPTCHA"
+        "captcha": "CAPTCHA",
+        "invalidPhoneNumber": "Invalid phone number provided!",
+        "invalidEmail": "Invalid email address provided!",
+        "requiredReferralCode": "Referral code is required!",
+        "invalidCode": "Invalid referral code provided!",
+        "blank": "This field may not be blank.",
+        "pass": "Passwords do not match!"
     }
 }

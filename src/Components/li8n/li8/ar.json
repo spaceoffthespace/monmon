@@ -222,17 +222,19 @@
     },
     "login": {
         "Pagetitle": "تسجيل الدخول",
+        "captcha1": "أدخل CAPTCHA",
         "phoneNumber": "رقم الهاتف",
         "Password": "كلمة المرور",
-        "captcha": "CAPTCHA",
+        "captcha": "كود CAPTCHA",
         "login": "تسجيل الدخول",
         "Register": "تسجيل",
-        "success": "تسجيل الدخول ناجح ✔️",
-        "err": "اسم المستخدم أو كلمة المرور غير صحيحة"
+        "success": "تم تسجيل الدخول بنجاح ✔️",
+        "invcaptcha": "كود CAPTCHA غير صحيح",
+        "invalidCredentials": "اسم المستخدم أو كلمة المرور غير صحيحة"
     },
     "register": {
         "Pagetitle": "تسجيل",
-        "text1": "مرحبا بك  ",
+        "text1": "مرحبًا بك في عالمنا",
         "text2": "لنبدأ شيئًا مثيرًا. قم بإنشاء حسابك الآن.",
         "phoneNumber": "رقم الهاتف",
         "email": "البريد الإلكتروني",
@@ -240,7 +242,13 @@
         "Last": "الاسم الأخير",
         "Password": "كلمة المرور",
         "confirm": "تأكيد كلمة المرور",
-        "refferer": "رقم الدعوة",
-        "captcha": "CAPTCHA"
+        "refferer": "كود الإحالة",
+        "captcha": "CAPTCHA",
+        "invalidPhoneNumber": "رقم الهاتف المProvid فاسد!",
+        "invalidEmail": "عنوان البريد الإلكتروني الذي تم تقديمه غير صالح!",
+        "requiredReferralCode": "كود الإحالة مطلوب!",
+        "invalidCode": "كود الإحالة الذي تم تقديمه غير صالح!",
+        "blank": "هذا الحقل لا يمكن أن يكون فارغًا.",
+        "pass": "كلمات المرور لا تتطابق!"
     }
 }

@@ -223,14 +223,15 @@
         "help": "Wie können wir Ihnen helfen?"
     },
     "login": {
-        "Pagetitle": "Anmelden",
+        "Pagetitle": "Anmeldung",
         "phoneNumber": "Telefonnummer",
         "Password": "Passwort",
-        "captcha": "CAPTCHA",
-        "login": "ANMELDEN",
+        "captcha": "CAPTCHA eingeben",
+        "login": "ANMELDUNG",
         "Register": "Registrieren",
         "success": "Anmeldung erfolgreich ✔️",
-        "err": "Falscher Benutzername oder Passwort"
+        "invcaptcha": "Ungültiges CAPTCHA",
+        "invalidCredentials": "Falscher Benutzername oder falsches Passwort"
     },
     "register": {
         "Pagetitle": "Registrieren",

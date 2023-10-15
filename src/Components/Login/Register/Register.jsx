@@ -14,6 +14,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import LoadLoader from '../../Loader/ClipsLoader'; // Ensure you import your loader component correctly
 import PhoneInput from 'react-phone-number-input';
 import InputAdornment from '@mui/material/InputAdornment';
+import { geolocated } from 'react-geolocated';
+import { getCountryCallingCode } from 'libphonenumber-js';
 
 import 'react-phone-number-input/style.css';
 import { Phone } from '@mui/icons-material';
@@ -37,6 +39,13 @@ const RegistrationPage = () => {
   const [loading, setLoading] = useState(true);
   const [clientIP, setClientIP] = useState('');
   const [country, setCountry] = useState('');
+  const [defaultCountry, setDefaultCountry] = useState(() => {
+    const storedDefaultCountry = localStorage.getItem('defaultCountry');
+    return storedDefaultCountry || ''; // Set the default value here
+  });
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const [phoneValue, setPhoneValue] = useState('');
 
   const [phone, setPhone] = useState('');
   const [countryCode, setCountryCode] = useState('');
@@ -53,31 +62,71 @@ const RegistrationPage = () => {
 
   const fetchIPAndCountry = async () => {
     try {
-      const response = await fetch('https://ipinfo.io/json');
-      const data = await response.json();
-      setClientIP(data.ip);
-      setCountry(data.country);
+      // Check if country and defaultCountry are already in localStorage
+      const storedCountry = localStorage.getItem('country');
+      const storedDefaultCountry = localStorage.getItem('defaultCountry');
+
+      if (storedCountry && storedDefaultCountry) {
+        setCountry(storedCountry);
+        setDefaultCountry(storedDefaultCountry);
+      } else {
+        // Fetch country and defaultCountry
+        const response = await fetch('http://ip-api.com/json');
+        const data = await response.json();
+        setClientIP(data.ip);
+        setCountry(data.countryCode);
+        setDefaultCountry(data.countryCode);
+        localStorage.setItem('country', data.countryCode); // Store in localStorage
+        localStorage.setItem('defaultCountry', data.countryCode); // Store in localStorage
+      }
     } catch (error) {
       console.error("Error fetching IP and country:", error);
+      try {
+        // If "ip-api.com" fails, fall back to using "ipinfo.io"
+        const ipInfoResponse = await axios.get('https://ipinfo.io/json');
+        const ipInfoData = ipInfoResponse.data;
+        setCountry(ipInfoData.country);
+        setDefaultCountry(ipInfoData.country);
+        localStorage.setItem('country', ipInfoData.country); // Store in localStorage
+        localStorage.setItem('defaultCountry', ipInfoData.country); // Store in localStorage
+        console.log(ipInfoData.country);
+      } catch (error) {
+        console.error('Error fetching user country from "ipinfo.io":', error);
+      }
     } finally {
       setLoading(false);
     }
   };
+  
 
   useEffect(() => {
     setReferralCode(ref_code || '');
     fetchIPAndCountry();
     axios.get(`${CAPTCHAurl}/api/get-captcha/`)
       .then(response => {
-          const data = response.data;
-          setCaptchaKey(data.captcha_key);
-          setCaptchaImage(`${CAPTCHAurl}${data.captcha_image}`);
-        })
+        const data = response.data;
+        setCaptchaKey(data.captcha_key);
+        setCaptchaImage(`${CAPTCHAurl}${data.captcha_image}`);
+      })
       .catch(error => {
-          console.error("Error fetching captcha:", error);
+        console.error("Error fetching captcha:", error);
       });
 
-  }, [ref_code]);
+    // Ensure the phone number has the country calling code prefixed
+    if (country && !username.startsWith('+')) {
+        const fullPhoneNumber = getFullPhoneNumber(username, country);
+        setUsername(fullPhoneNumber);
+    }
+
+}, [ref_code, country]);
+
+  function getFullPhoneNumber(phoneNumber, countryCode) {
+    if (phoneNumber.startsWith('+')) {
+        return phoneNumber;
+    }
+    const callingCode = getCountryCallingCode(countryCode);
+    return `+${callingCode}${phoneNumber}`;
+}
 
 
 
@@ -89,21 +138,21 @@ const RegistrationPage = () => {
 
     let errors = {};
 
-    if (!username.trim()) errors.username = ["This field may not be blank."];
-    if (!email.trim()) errors.email = ["This field may not be blank."];
-    if (!firstName.trim()) errors.first_name = ["This field may not be blank."];
-    if (!lastName.trim()) errors.last_name = ["This field may not be blank."];
+    if (!username.trim()) errors.username =  [t('register.blank')];
+    if (!email.trim()) errors.email =  [t('register.blank')];
+    if (!firstName.trim()) errors.first_name =  [t('register.blank')];
+    if (!lastName.trim()) errors.last_name =  [t('register.blank')];
 
     const phoneRegex = /^\+?[1-9]\d{1,14}$/; 
     if (!phoneRegex.test(username)) {
-        errors.username = ["Please enter a valid phone number."];
+        errors.username = [t('register.invalidPhoneNumber')];
     }
 
     // Validate that password is filled out
-    if (!password.trim()) errors.password = ["This field may not be blank."];
+    if (!password.trim()) errors.password =  [t('register.blank')];
 
     // Validate that referral code is filled out
-    if (!referralCode.trim()) errors.ref_code = ["This field may not be blank."];
+    if (!referralCode.trim()) errors.ref_code =  [t('register.blank')];
 
     if (Object.keys(errors).length) {
       setFieldErrors(errors);
@@ -113,7 +162,7 @@ const RegistrationPage = () => {
     if (password !== confirmPassword) {
       setPasswordMatch(false);
       setOpenSnackbar(true);
-      setErrorMessage('Passwords do not match!');
+      setErrorMessage(t('register.pass'));
       return;
     }
 
@@ -133,24 +182,39 @@ const RegistrationPage = () => {
         captcha_response: captchaResponse
       };
 
+      
       const response = await axios.post(`${apiUrl}/register/`, userData);
       navigate('/login', { state: { username } });
     } catch (error) {
       if (error.response && error.response.data) {
-          if (error.response.data.detail) { // Checking if the error detail is present
+        if (error.response.data.detail) {
               setOpenSnackbar(true);
-              setErrorMessage(error.response.data.detail);
+              
+              const translationKey = mapErrorToTranslationKey(error.response.data.detail);
+              const translatedErrorMessage = t(`register.${translationKey}`);
+              setErrorMessage(translatedErrorMessage);
           } else {
-              // Override frontend errors with backend errors if any
+            // Handle other types of errors
               setFieldErrors(error.response.data);
-          }
+            }
       } else {
-          setOpenSnackbar(true);
-          setErrorMessage('Registration failed. Please try again.');
+        setOpenSnackbar(true);
+          setErrorMessage(t('register.errors.genericError'));
       }
       console.error(error);
-    }
+  }
 };
+function mapErrorToTranslationKey(errorMessage) {
+  const errorMapping = {
+      "Invalid phone number provided!": "invalidPhoneNumber",
+      "Invalid email address provided!": "invalidEmail",
+      "Invalid referral code provided!": "invalidCode",
+      "Referral code is required!": "requiredReferralCode"
+      // Add more mappings as needed
+  };
+
+  return errorMapping[errorMessage] || "genericError"; // Fallback to a generic error key if the specific error message is not mapped
+}
 
 const [language, setLanguage] = useState(() => {
   // Restore the language option from local storage if present, otherwise default to 'en'
@@ -203,19 +267,24 @@ const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
         label={t('register.phoneNumber')}
         variant="filled"
         value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        onChange={(e) => {
+          const sanitizedValue = e.target.value.replace(/[^0-9+]/g, '');
+          setUsername(sanitizedValue);
+      }}
         fullWidth
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
               <PhoneInput
-                international
-                countryCallingCodeEditable={false}
-                defaultCountry={'US'}
-                value={username}
-                onChange={setUsername}
-                style={{ width: 'auto' }}
-              />
+    displayInitialValueAsLocalNumber
+    international
+    countryCallingCodeEditable={false}
+    value={username}
+    onChange={value => setUsername(getFullPhoneNumber(value, country))}
+    defaultCountry={defaultCountry}
+    country={defaultCountry}
+    style={{ width: 'auto' }}
+/>
             </InputAdornment>
           ),
         }}
