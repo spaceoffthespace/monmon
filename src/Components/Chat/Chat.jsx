@@ -9,7 +9,7 @@ const Chat = ({ handleGoBack }) => {
   const { t } = useTranslation();
 
   const handleOpenChat = () => {
-    window.open("https://your-chat-link.com", "_blank");
+    window.open("https://t.me/MallSupportChat", "_blank");
   };
 
   return (

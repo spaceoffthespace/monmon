@@ -30,3 +30,7 @@
     display: inline-block;
     vertical-align: top;
 }
+
+.no-notifications-icon {
+    align-items: center;
+}

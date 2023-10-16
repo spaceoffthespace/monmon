@@ -99,11 +99,11 @@ const NotificationsComponent = ({ handleGoBack }) => {
     if (notifications.length === 0) {
         return (
             <div>
-                <Navbutton pageName={t('teamReport.noName')}showBackButton={true} onBackClick={handleGoBack} />
+                <Navbutton pageName={t('AccountComp.Menu_Notifications')}showBackButton={true} onBackClick={handleGoBack} />
                 <div className="no-notifications-container">
                     <NotificationsOffIcon className="no-notifications-icon" />
-                    <p className="no-notifications-message"> {t('notifPage.noNot')}</p>
                     <img src={boxbox} alt="No data" className="no-data-background" />
+                    <p className="no-data-message"> {t('notifPage.noNot')}</p>
                 </div>
             </div>
         );
