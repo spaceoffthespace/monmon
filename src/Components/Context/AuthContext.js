@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next'; // Import the useTranslation hoo
 import SnackbarContent from '@mui/material/SnackbarContent';
 
 const AuthContext = createContext();
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const AuthProvider = ({ children }) => {
 
@@ -34,7 +35,7 @@ const AuthProvider = ({ children }) => {
 
     const loginUser = async (payload) => {
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/token/', {
+            const response = await fetch(`${apiUrl}/token/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -95,7 +96,7 @@ const AuthProvider = ({ children }) => {
         }
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/get_user_data/', {
+            const response = await fetch(`${apiUrl}/get_user_data/`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -127,7 +128,7 @@ const AuthProvider = ({ children }) => {
     let updateToken = async () => {
         // Check if authTokens is not null and refresh token is present
         if (authTokens && authTokens.refresh) {
-            let response = await fetch('http://127.0.0.1:8000/api/token/refresh/', {
+            let response = await fetch(`${apiUrl}/token/refresh/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
