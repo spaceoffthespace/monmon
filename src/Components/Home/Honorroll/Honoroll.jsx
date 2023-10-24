@@ -17,7 +17,7 @@ const HonorRoll = () => {
   const { t } = useTranslation();
  
 useEffect(() => {
-  const countries = ['US', 'AE', 'CA', 'DE', 'FR', 'ES']; // Add more country codes as needed
+  const countries = ['US', 'AE', 'CA', 'DE', 'FR', ]; // Add more country codes as needed
 
   const randomized = Array.from({ length: 10 }, (_, index) => {
       const country = countries[Math.floor(Math.random() * countries.length)];

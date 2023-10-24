@@ -138,7 +138,7 @@ const options = {
                           {t('HomeComp.completed')}
                           </Typography>
                           <Typography variant="h6" component="div" color="white" mb={2}>
-                          {user.completed_tasks_count} 
+                          {user.tasks_done_today} 
                           </Typography>
                           <div style={{ width: '60px', height: '30px' }}>
                               {/* <Line data={data} options={options} /> */}

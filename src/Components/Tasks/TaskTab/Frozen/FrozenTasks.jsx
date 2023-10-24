@@ -41,7 +41,7 @@ const FrozenTasksComponent = ({ tasks }) => {
       );
 
       if (response.status === 200) {
-        setSnackbarMessage(t('taskFrozen.taskCompleted'));
+        setSnackbarMessage(t('TaskComp.taskCompleted'));
         setAlertSeverity('success');
         setOpenSnackbar(true);
       }

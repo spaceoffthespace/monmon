@@ -252,5 +252,23 @@
         "invalidCode": "Invalid referral code provided!",
         "blank": "This field may not be blank.",
         "pass": "Passwords do not match!"
+    },
+    "aboutus": {
+        "pageTitle": "About Us",
+        "mainTitle": "How Our Esteemed App Works",
+        "introText": "Immerse yourself in an ecosystem where every engagement is not just a transaction but a step towards revolutionizing the digital marketplace. Our platform, distinguished and globally recognized, is where innovation meets convenience, and entrepreneurship is not a benefit but a lifestyle.",
+        "boostingMerchantTrafficTitle": "Empowering Global Merchants",
+        "boostingMerchantTrafficText": "Our industry-leading platform is trusted by thousands, bridging users and merchants worldwide. As you undertake tasks, you play an integral role in skyrocketing product visibility. Dive into an ecosystem where each task not only amplifies merchant traffic but also enriches your earning portfolio.",
+        "buyingAndSellingTitle": "A Benchmark in Buy & Resell",
+        "buyingAndSellingText": "Join a community that's reshaping e-commerce. Our renowned platform is the gold standard for purchasing products and reselling them without the complexities of inventory management. Capitalize on every purchase, setting your selling price in an already rapidly growing marketplace.",
+        "dropshippingTitle": "The Pinnacle of Dropshipping",
+        "dropshippingText": "Experience dropshipping at its zenith. Our app, celebrated by industry veterans, ensures you focus solely on selling. Let us handle the intricacies of inventory and shipping. Commence your effortless online selling journey with a platform that's synonymous with excellence.",
+        "faqTitle": "Frequently Asked Questions",
+        "faq1Question": "What's the Secret Behind Amplifying Merchant Traffic?",
+        "faq1Answer": "Embrace tasks in the 'Grab' section. As you promote products and engage with content, you're thrusting merchants into the limelight, all while enjoying substantial commissions. Isn't it time you joined the ranks of our thriving community?",
+        "faq2Question": "How Does the Celebrated Buy and Resell Model Function Here?",
+        "faq2Answer": "Grab a sold Product, resell, and watch your profits soar. With us, you leverage the differential between buying and selling prices. Remember, each transaction happens in a vibrant and dynamic marketplace, teeming with eager buyers and sellers.",
+        "faq3Question": "Why is Our Dropshipping Approach Revered by Industry Experts?",
+        "faq3Answer": "Because simplicity meets sophistication. You sell, we manage. From inventory management to shipping, we've streamlined everything. Step into a world where every sale is a testament to seamless efficiency."
     }
 }

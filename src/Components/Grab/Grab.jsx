@@ -98,7 +98,7 @@ const AnalyticsRectangle = () => {
       <div className="analytics-section">
         <Typography variant="h6">{t('GrabComp.CompletedOrders')}</Typography>
         <Typography variant="h4">
-          {fetchingData ? <ClipLoader color="#FFFFFF" css={{animation: 'none'}} height={24} width={24} /> : user.completed_tasks_count}
+          {fetchingData ? <ClipLoader color="#FFFFFF" css={{animation: 'none'}} height={24} width={24} /> : user.tasks_done_today}
         </Typography>
       </div>
       <div className="analytics-section">
