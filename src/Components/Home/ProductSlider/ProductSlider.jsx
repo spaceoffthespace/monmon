@@ -47,9 +47,16 @@ export default function SimpleSlider() {
       <div className="slider-container">
         <Slider {...settings}>
           {slideImages.map((image, index) => (
-              <div key={index} className="slider-item">
-              <div className="image-container">
-                <img src={image} alt={`Slide ${index}`} />
+            <div key={index} className="slider-item">
+              <div className="image-container skeleton">  {/* Added skeleton class */}
+                <img 
+                  src={image} 
+                  alt={`Slide ${index}`} 
+                  loading="lazy"  // Added lazy loading
+                  onLoad={(e) => {  // Once the image is loaded, remove the skeleton
+                    e.target.parentNode.classList.remove("skeleton");
+                  }}
+                />
               </div>
             </div>
           ))}

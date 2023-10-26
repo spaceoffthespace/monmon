@@ -52,6 +52,14 @@ const generateRandomAction = (country) => {
     return profileImages[keys[Math.floor(Math.random() * keys.length)]];
   };
 
+  const getAccountLevelIcon = (amountValue) => {
+    if (amountValue >= 7000) return diamond;
+    if (amountValue >= 5000) return platinum;
+    if (amountValue >= 1000) return silver;
+    if (amountValue >= 400) return bronze;
+    return bronze;
+  };
+
   return (
     <div className="honor-roll-container">
       <div className="honor-roll-wrapper">
@@ -63,44 +71,16 @@ const generateRandomAction = (country) => {
                   src={user.profilePhoto}
                   alt="Profile"
                   className="honor-profile-image"
+                  loading="lazy"
                   style={{ maxWidth: '80px', maxHeight: '80px' }}
                 />
-                {user.amountValue >= 7000 ? (
-                  <img
-                    src={diamond}
-                    alt="Diamond"
-                    className="account-level-icon"
-                    style={{ maxWidth: '90px', maxHeight: '50px' }}
-                  />
-                ) : user.amountValue >= 5000 ? (
-                  <img
-                    src={platinum}
-                    alt="Platinum"
-                    className="account-level-icon"
-                    style={{ maxWidth: '90px', maxHeight: '50px' }}
-                  />
-                ) : user.amountValue >= 1000 ? (
-                  <img
-                    src={gold}
-                    alt="Gold"
-                    className="account-level-icon"
-                    style={{ maxWidth: '90px', maxHeight: '50px' }}
-                  />
-                ) : user.amountValue >= 400 ? (
-                  <img
-                    src={silver}
-                    alt="Silver"
-                    className="account-level-icon"
-                    style={{ maxWidth: '90px', maxHeight: '50px' }}
-                  />
-                ) : (
-                  <img
-                    src={bronze}
-                    alt="Bronze"
-                    className="account-level-icon"
-                    style={{ maxWidth: '90px', maxHeight: '50px' }}
-                  />
-                )}
+                   <img
+                  src={getAccountLevelIcon(user.amountValue)}
+                  alt="Account Level"
+                  className="account-level-icon"
+                  loading="lazy"
+                  style={{ maxWidth: '90px', maxHeight: '50px' }}
+                />
                 <div className="user-action">{user.action}</div>
                 <div className="user-amount"> {user.amount}</div>
               </div>

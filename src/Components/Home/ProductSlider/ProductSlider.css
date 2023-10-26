@@ -39,7 +39,11 @@
     /* Remove inline block spacing */
     margin: auto;
     /* Center the image */
+    transition: opacity 0.3s;
+    opacity: 0;
 }
+
+
 
 
 .slider-container {
@@ -60,4 +64,29 @@
         /* Will not exceed the container’s width */
         margin-bottom: 10px;
     }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+    height: au;
+    background-size: 200% 100%; /* for the shimmer effect */
+    animation: shimmer 1.5s infinite;
+    border-radius: 10px; /* make it similar to actual image */
+    border: 2px solid transparent; /* so the borders have the same space as actual images */
+    min-height: 200px; /* you can adjust based on the average height of your images or let it be defined by content */
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+.image-container:not(.skeleton) img {
+    
+    opacity: 1; /* Show the image once it's loaded */
 }

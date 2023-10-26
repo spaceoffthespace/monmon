@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useEffect  } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import i18n from './Components/li8n/li8n';
 import './App.css'
@@ -10,6 +10,12 @@ import ProtectedRoute from './Components/utils/ProtectedRoute/ProtectedRoute';
 import ManageWallet from './Components/Account/Manage/ManageWallet';
 
 const App = () => {
+  useEffect(() => {
+    const loader = document.getElementById('initial-loader');
+    if (loader) {
+        loader.style.display = 'none';
+    }
+}, []);
   return (
     <Routes>
       <Route path='/login' element={<LoginPage />} />

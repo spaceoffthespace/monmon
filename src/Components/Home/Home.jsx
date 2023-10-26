@@ -45,6 +45,7 @@ const Home = () => {
   const [activeCum, setActiveCum] = useState("home");
   const { activeNavTab, setActiveNavTab } = useAppContext();
   const [earningsData, setEarningsData] = useState([]);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const [language, setLanguage] = useState(() => {
     return localStorage.getItem('language') || 'en';  // Retrieve saved language or default to English
@@ -136,13 +137,14 @@ useEffect(() => {
           </div>
         </div>
         <div className="image-spot-container">
-          <img
+        <div className={`image-spot-skeleton ${isLoaded ? 'fade-out' : 'fade-in'}`}></div>
+        <img
             src={currentImage}
             alt="Image Spot"
             className={`image-spot ${isLoaded ? 'fade-in' : 'fade-out'}`}
             onLoad={handleImageLoad}
-          />
-        </div>
+        />
+    </div>
      
           
           <Box
