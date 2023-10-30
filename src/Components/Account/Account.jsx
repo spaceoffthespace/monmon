@@ -140,15 +140,15 @@ const Account = () => {
   const renderAccountTypeImage = (type) => {
     switch(type) {
         case 'bronze':
-          return <img src={bronze} alt="Standard User" width="40" height="130" />;
+          return <img src={bronze} loading="lazy" alt="Standard User" width="40" height="130" />;
         case 'silver':
-          return <img src={silver} alt="Standard User" width="50" height="130" />;
+          return <img src={silver} loading="lazy" alt="Standard User" width="50" height="130" />;
         case 'gold':
-          return <img src={gold} alt="Standard User" width="40" height="130" />;
+          return <img src={gold} loading="lazy" alt="Standard User" width="40" height="130" />;
         case 'platinum':
-          return <img src={platinum} alt="Standard User" width="40" height="130" />;
+          return <img src={platinum} loading="lazy"alt="Standard User" width="40" height="130" />;
         case 'diamond':
-          return <img src={diamond} alt="Standard User" width="40" height="130" />;
+          return <img src={diamond} loading="lazy" alt="Standard User" width="40" height="130" />;
         default:
             return null;
     }
@@ -234,11 +234,11 @@ useEffect(() => {
 
   <div className="account-button-container">
     <div className="action-container">
-      <img src={withdraw} alt="Withdraw" className="action-image" onClick={handleWithdrawClick} />
+      <img src={withdraw} alt="Withdraw" loading="lazy" className="action-image" onClick={handleWithdrawClick} />
       <Typography variant="body2" className="action-text">{t('AccountComp.Withdraw')}</Typography>
     </div>
     <div className="action-container">
-      <img src={recharge} alt="Recharge" className="action-image" onClick={() => setActiveNavTab('recharge')} />
+      <img src={recharge} alt="Recharge" loading="lazy" className="action-image" onClick={() => setActiveNavTab('recharge')} />
       <Typography variant="body2" className="action-text">{t('AccountComp.Recharge')}</Typography>
     </div>
   </div>
@@ -253,7 +253,7 @@ useEffect(() => {
       <div className="account-menu-section">
         <Button  onClick={handleteamsClick} className="menu-button" variant="text" fullWidth>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={teams} alt="teams" className="menu-image" />
+            <img src={teams} alt="teams" loading="lazy" className="menu-image" />
             <Typography variant="body2" className="menu-text">{t('AccountComp.Teams')}</Typography>
           </div>
         </Button>
@@ -264,7 +264,7 @@ useEffect(() => {
       <div className="account-menu-section">
         <Button  onClick={handleRecordsButtonClick} className="menu-button" variant="text" fullWidth>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={record} alt="records" className="menu-image" />
+            <img src={record} alt="records" loading="lazy" className="menu-image" />
             <Typography variant="body2" className="menu-text">{t('AccountComp.Records')}</Typography>
           </div>
         </Button>
@@ -289,7 +289,7 @@ useEffect(() => {
       <div className="account-menu-section">
         <Button onClick={handleInviteClick} className="menu-button" variant="text" fullWidth>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={invite} alt="invite" className="menu-image" />
+            <img src={invite} alt="invite" loading="lazy" className="menu-image" />
             <Typography variant="body2" className="menu-text">{t('AccountComp.Invite')}</Typography>
           </div>
         </Button>

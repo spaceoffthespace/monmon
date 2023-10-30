@@ -9,19 +9,16 @@
 }
 
 .logo-home-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* Distribute items evenly */
-  width: 100%;
-  /* Ensure it takes the full width */
-  max-width: 400px;
-  /* Set a max width for the logo container */
+  display: flex; /* assuming you're using flexbox */
+  align-items: center; /* vertically center the items */
+  justify-content: space-between; /* adjust this according to your layout needs */
+  min-height: 50px; /* set a minimum height that works for your design */
 }
 
 
 .logo-image {
   width: 100px;
+  
 }
 
 .sup-image {

@@ -118,24 +118,28 @@ useEffect(() => {
     <div>
       {activeCum === "home" && (
         <div className="home-container">
+
         <div className="logo-home-container">
           <div className="left">
-          <img src={support} alt="sup" className="sup-image" onClick={() => setActiveCum('chatsup')} />
+            <img src={support} alt="sup" className="sup-image" onClick={() => setActiveCum('chatsup')} />
           </div>
+
           <div className="center">
-            <img src={amazonlogo} alt="Logo" className="logo-image" />
+            <img src={amazonlogo} alt="Logo" loading="lazy" className="logo-image" />
           </div>
+
           <div className="right">
             <div className="language-container">
-            <select value={language} onChange={handleLanguageChange}>  {/* Set value prop to ensure the selected option matches the state */}
-            <option value="en">English</option>
-              <option value="ar">العربية</option> 
-              <option value="fr">Français</option>
-              <option value="gr">Deutsch</option> 
+              <select value={language} onChange={handleLanguageChange}>  {/* Set value prop to ensure the selected option matches the state */}
+                <option value="en">English</option>
+                <option value="ar">العربية</option> 
+                <option value="fr">Français</option>
+                <option value="gr">Deutsch</option> 
               </select>
             </div>
           </div>
         </div>
+
         <div className="image-spot-container">
         <div className={`image-spot-skeleton ${isLoaded ? 'fade-out' : 'fade-in'}`}></div>
         <img
