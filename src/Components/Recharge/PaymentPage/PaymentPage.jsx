@@ -63,8 +63,10 @@ const PaymentPage = ({ rechargeAmount, selectedCurrency }) => {
   let {user, authTokens} = useContext(AuthContext)
 
  const handleFinishUpload = () => {
+  setIsUploading(true);
   if (!uploadedImage) {
     setError("Please upload a screenshot before finishing upload");
+    setIsUploading(false);
     return;
   }
 
@@ -107,7 +109,7 @@ const PaymentPage = ({ rechargeAmount, selectedCurrency }) => {
     setIsUploading(false); // Reset isUploading after the request is complete
   });
   
-setIsUploading(true); // Set isUploading to true when starting the upload request
+ // Set isUploading to true when starting the upload request
 };
 
 
@@ -258,11 +260,16 @@ const walletAddresses = {
     </div>
   </DialogContent>
   <DialogActions>
-    <Button onClick={handleFinishUpload} variant="contained">
-      {t('PaymentPage.Finished')}
-    </Button>
-    <Button onClick={handleCloseModal}>{t('PaymentPage.Close')}</Button>
-  </DialogActions>
+  <Button 
+    onClick={handleFinishUpload} 
+    variant="contained" 
+    disabled={isUploading} // Disable the button when uploading is in progress
+    startIcon={isUploading ? <CircularProgress size={24} color="inherit" /> : null} // Show loading spinner when uploading
+  >
+    {t('PaymentPage.Finished')}
+  </Button>
+  <Button onClick={handleCloseModal}>{t('PaymentPage.Close')}</Button>
+</DialogActions>
 </Dialog>
         
       </Paper>

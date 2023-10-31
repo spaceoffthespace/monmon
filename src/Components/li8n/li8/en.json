@@ -101,9 +101,9 @@
     },
     "GrabComp": {
         "Pagetitle": "Grab",
-        "All": "All",
+        "All": "Available",
         "PersonalEarnings": "Personal Earnings",
-        "CompletedOrders": "Completed Orders",
+        "CompletedOrders": "Completed Today",
         "LockedOrders": "Locked Orders",
         "UnfinishedOrders": "Unfinished Orders",
         "Hold": "Hold",
