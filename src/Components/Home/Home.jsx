@@ -121,11 +121,11 @@ useEffect(() => {
 
         <div className="logo-home-container">
           <div className="left">
-            <img src={support} alt="sup" className="sup-image" onClick={() => setActiveCum('chatsup')} />
+            <img src={support} className="sup-image" onClick={() => setActiveCum('chatsup')} />
           </div>
 
           <div className="center">
-            <img src={amazonlogo} alt="Logo" loading="lazy" className="logo-image" />
+            <img src={amazonlogo}  loading="lazy" className="logo-image" />
           </div>
 
           <div className="right">
@@ -144,7 +144,6 @@ useEffect(() => {
         <div className={`image-spot-skeleton ${isLoaded ? 'fade-out' : 'fade-in'}`}></div>
         <img
             src={currentImage}
-            alt="Image Spot"
             className={`image-spot ${isLoaded ? 'fade-in' : 'fade-out'}`}
             onLoad={handleImageLoad}
         />

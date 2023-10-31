@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Typography, Button, Grid, Paper, Dialog, DialogTitle, DialogContent, DialogActions, TextField , IconButton } from '@mui/material';
 import qr from '../../assets/qr.png';
 import './PaymentPage.css';
+import CircularProgress from '@mui/material/CircularProgress'; // Add this import
+
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import usdt from '../../assets/tokens/usdt-trc.png';
 import usdteth from '../../assets/tokens/usdt_eth.png';
@@ -29,6 +31,8 @@ const PaymentPage = ({ rechargeAmount, selectedCurrency }) => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [alertSeverity, setAlertSeverity] = useState('success');
   const [alertMessage, setAlertMessage] = useState('');
+  const [isUploading, setIsUploading] = useState(false); // New state variable
+
 
   const { t } = useTranslation(); // Initialize the translation hook
 
@@ -98,8 +102,14 @@ const PaymentPage = ({ rechargeAmount, selectedCurrency }) => {
     setAlertSeverity('error');
     setAlertMessage(t('PaymentPage.snack2error'));
     setSnackbarOpen(true);
+  })
+  .finally(() => {
+    setIsUploading(false); // Reset isUploading after the request is complete
   });
+  
+setIsUploading(true); // Set isUploading to true when starting the upload request
 };
+
 
 const handleCopyWallet = () => {
   const walletElement = document.getElementById('payment-page-wallet');
@@ -205,26 +215,32 @@ const walletAddresses = {
   <DialogContent style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
     {/* Custom File Upload Button with Camera Icon */}
     <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <IconButton
-        color="primary"
-        component="label"
-        style={{
-          width: '100px',
-          height: '100px',
-          border: '2px dashed gray',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          cursor: 'pointer'
-        }}
-      >
-        <CameraAltIcon fontSize="large" />
-        <input
-          type="file"
-          hidden
-          onChange={handleImageUpload}
-          accept="image/*"
-        />
+    <IconButton
+              color="primary"
+              component="label"
+              style={{
+                width: '100px',
+                height: '100px',
+                border: '2px dashed gray',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                cursor: isUploading ? 'not-allowed' : 'pointer', // Disable button during upload
+              }}
+              disabled={isUploading} // Disable button during upload
+            >
+              {isUploading ? ( // Show loading spinner when uploading
+                <CircularProgress size={24} color="primary" />
+              ) : (
+                <CameraAltIcon fontSize="large" />
+              )}
+              <input
+                type="file"
+                hidden
+                onChange={handleImageUpload}
+                accept="image/*"
+                disabled={isUploading} // Disable input during upload
+              />
       </IconButton>
     </div>
     {/* End of Custom File Upload Button with Camera Icon */}
