@@ -31,7 +31,7 @@ const Recharge = () => {
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  const [currency, setCurrency] = useState('USDT-TRC20');
+  const [currency, setCurrency] = useState('USDT-ERC20');
 
   
   const { t } = useTranslation(); // Initialize the translation hook
@@ -347,23 +347,6 @@ const Recharge = () => {
   label="Currency"
   onChange={(e) => setCurrency(e.target.value)}
   >
-  <MenuItem value="USDT-TRC20">
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        USDT
-        <img
-          src={usdt}
-          alt="USDT logo"
-          style={{
-            marginLeft: '10px',
-            maxWidth: '50px',
-            maxHeight: '25px'
-          }} 
-        />
-      </div>
-      <span style={{ fontSize: '0.8em', color: 'gray' }}>TRC20</span>
-    </div>
-  </MenuItem>
 
   <MenuItem value="USDT-ERC20">
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
@@ -382,6 +365,23 @@ const Recharge = () => {
       <span style={{ fontSize: '0.8em', color: 'gray' }}>ERC20</span>
     </div>
   </MenuItem>
+            <MenuItem value="USDT-TRC20">
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  USDT
+                  <img
+                    src={usdt}
+                    alt="USDT logo"
+                    style={{
+                      marginLeft: '10px',
+                      maxWidth: '50px',
+                      maxHeight: '25px'
+                    }} 
+                  />
+                </div>
+                <span style={{ fontSize: '0.8em', color: 'gray' }}>TRC20</span>
+              </div>
+            </MenuItem>
   <MenuItem value="bank-transfer" disabled>
   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
     <div style={{ display: 'flex', alignItems: 'center' }}>

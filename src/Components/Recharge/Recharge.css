@@ -116,6 +116,11 @@
     cursor: pointer;
 }
 
+.recharge-options button:active,
+.recharge-options button:focus {
+    color: rgb(252, 252, 252);
+}
+
 .recharge-input-container {
     display: flex;
     justify-content: center;
@@ -155,12 +160,10 @@
 .payment-method-option.selected {
     background-color: #e6f7ff;
     border: 3px solid #0077b6;
+    color: #ffffff;
 }
 
-.payment-method-option.selected {
-    background-color: #e6f7ff !important;
-    border: 3px solid #0077b6 !important;
-}
+
 
 .text-stroke {
     color: white;

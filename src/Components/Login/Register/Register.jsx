@@ -39,6 +39,8 @@ const RegistrationPage = () => {
   const [loading, setLoading] = useState(true);
   const [clientIP, setClientIP] = useState('');
   const [country, setCountry] = useState('');
+  const [countryIP, setCountryIP] = useState('');
+
   const [defaultCountry, setDefaultCountry] = useState(() => {
     const storedDefaultCountry = localStorage.getItem('defaultCountry');
     return storedDefaultCountry || ''; // Set the default value here
@@ -76,8 +78,11 @@ const RegistrationPage = () => {
         setClientIP(data.ip);
         setCountry(data.countryCode);
         setDefaultCountry(data.countryCode);
+        setCountryIP(data.countryCode); // Set countryIP for backend
+
         localStorage.setItem('country', data.countryCode); // Store in localStorage
         localStorage.setItem('defaultCountry', data.countryCode); // Store in localStorage
+        console.log(data.ip)
       }
     } catch (error) {
       console.error("Error fetching IP and country:", error);
@@ -178,6 +183,7 @@ const RegistrationPage = () => {
         password,
         ref_code: referralCode,
         register_ip: clientIP,
+        country_ip: defaultCountry, // Include country_ip in the payload
         captcha_key: captchaKey,
         captcha_response: captchaResponse
       };

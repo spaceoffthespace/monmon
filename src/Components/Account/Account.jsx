@@ -353,7 +353,7 @@ useEffect(() => {
       </Paper>
 
 
-<div ref={menuContainerRef} >
+<div className='menu-contain-container' ref={menuContainerRef} >
  
 
   <Card>
@@ -443,7 +443,6 @@ useEffect(() => {
       </CardContent>
     </CardActionArea>
   </Card>
-</div>
 
 
 
@@ -453,14 +452,15 @@ useEffect(() => {
 
   {user ? (
           <p  onClick={logoutUser}> {t('AccountComp.Menu_logout')} </p>
-        
-        ) : (
-          <Link to="/login">login</Link>
+          
+          ) : (
+            <Link to="/login">login</Link>
         )
       }
 
 </Paper>
 
+            </div>
 </>
       )}
     
