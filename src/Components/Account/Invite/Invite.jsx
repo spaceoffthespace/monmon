@@ -9,9 +9,11 @@ import './Invite.css';
 const Invite = ({ handleGoBack, user }) => {
   const [copySuccess, setCopySuccess] = useState(false);
 
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = process.env.REACT_APP_API_URL;   
+  const appurl = process.env.REACT_APP_URL;   
+  
 
-  const inviteLink = `${apiUrl}/register/${user.code}`;
+  const inviteLink = `${appurl}/register/${user.code}`;
   const { t } = useTranslation(); // Initialize the translation hook
 
   const handleCopy = async () => {
