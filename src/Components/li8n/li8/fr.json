@@ -28,7 +28,11 @@
         "additionalInfoText2": "Pour des raisons de sécurité, assurez-vous de garder votre adresse de portefeuille confidentielle.",
         "snack1": "Le portefeuille a été mis à jour avec succès !",
         "snack2": "Le portefeuille a été mis à jour avec succès !",
-        "snack3": "Vous ne pouvez mettre à jour votre adresse de livraison qu'une fois toutes les 24 heures."
+        "snack3": "Vous ne pouvez mettre à jour votre adresse de livraison qu'une fois toutes les 24 heures.",
+        "walletAddressHelperText": "Entrez ici votre nouvelle adresse de portefeuille",
+        "currencyHelperText": "Sélectionnez la devise pour le portefeuille",
+        "clickToEdit": "Cliquez pour mettre à jour",
+        "curadd": "Votre adresse de portefeuille actuelle est :"
     },
     "accountPage": {
         "pageTitle": "Compte",
@@ -134,15 +138,17 @@
         "RequestWithdrawalButton": "Demander le retrait",
         "InfoText1": "Veuillez prévoir jusqu'à 3 jours ouvrables pour le traitement de la demande de retrait.",
         "InfoText2": "Pour toute question ou problème, veuillez contacter notre équipe d'assistance.",
+        "NoDeliveryAddress": "Veuillez définir une adresse de livraison dans l'onglet compte > gérer le portefeuille",
+
         "FinePrint": "* Votre demande de retrait sera traitée dans un délai de 3 jours ouvrables. Toutes les frais éventuels sont soumis aux conditions de la politique de retrait. Assurez-vous toujours que l'adresse de retrait est correcte pour éviter les retards.",
         "TasksNotCompleted": "Vous devez terminer toutes les tâches disponibles pour aujourd'hui avant de retirer de l'argent.",
 
 
 
+        "Success": "Demande de retrait soumise avec succès !",
 
         "ErrorMakingWithdrawal": "Une erreur s'est produite lors du traitement de votre demande. Veuillez réessayer.",
         "Snackbar": {
-            "Success": "Demande de retrait soumise avec succès !",
             "InsufficientFunds": "Fonds insuffisants. Veuillez vérifier votre solde et réessayer.",
             "InvalidAmount": "Montant de retrait invalide. Veuillez saisir un montant valide."
         }

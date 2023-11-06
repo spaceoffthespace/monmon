@@ -37,7 +37,7 @@ const Withdraw = ({ handleGoBack }) => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [severity, setSeverity] = useState('success');
-  const [currency, setCurrency] = useState('USDT');
+  const [currency, setCurrency] = useState('USDT-ERC20');
   const [insufficientBalance, setInsufficientBalance] = useState(false);
   const [deliveryAddressSet, setDeliveryAddressSet] = useState(!!user.deliveryAddress);
   const { t } = useTranslation();
@@ -107,26 +107,32 @@ const Withdraw = ({ handleGoBack }) => {
   };
 
   const handleConfirmAddress = () => {
-    const withdrawalAmount = parseFloat(withdrawAmount);
+    const withdrawalAmountNum = parseFloat(withdrawAmount);
     
     if (!user.deliveryAddress) {
       setSeverity('error');
       setMessage(t('WithdrawComp.NoDeliveryAddress'));
       setOpen(true);
-      return;  // Exit the function here
+      return; // Exit the function here if no delivery address
     }
-
-    if (withdrawalAmount > parseFloat(user.balance)) {
-      setInsufficientBalance(true);
+  
+    if (parseFloat(user.balance) <= 10) {
       setSeverity('error');
-      setMessage(t('WithdrawComp.InsufficientBalance'))
+      setMessage(t('WithdrawComp.InsufficientBalanceError')); // You'll need to define this message in your translations
       setOpen(true);
-    } else {
-      setInsufficientBalance(false);
-      setIsConfirming(true);
+      return; // Exit the function here if balance is not greater than 10
     }
-};
-
+  
+    if (withdrawalAmountNum > parseFloat(user.balance)) {
+      setSeverity('error');
+      setMessage(t('WithdrawComp.InsufficientBalanceError'));
+      setOpen(true);
+      return; // Exit the function here if withdrawal amount exceeds balance
+    }
+  
+    // Only proceed to confirm if there's enough balance and it's over 10
+    setIsConfirming(true);
+  };
   
 
   return (

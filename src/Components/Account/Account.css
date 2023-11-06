@@ -203,7 +203,9 @@
 
 
 
-
+.account-code {
+    text-transform: uppercase;
+  }
 
 
 .account-info-card {

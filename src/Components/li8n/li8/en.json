@@ -28,8 +28,15 @@
         "additionalInfoText2": "For security purposes, make sure to keep your wallet address confidential.",
         "snack1": "Wallet has been updated successfully!",
         "snack2": "Wallet has been updated successfully!",
-        "snack3": "You can only update your delivery address once every 24 hours."
+        "snack3": "You can only update your delivery address once every 24 hours.",
+        "walletAddressHelperText": "Enter your new wallet address here",
+        "currencyHelperText": "Select the currency for the wallet",
+        "clickToEdit": "Click to update",
+        "curadd": "Your current address is:"
+
     },
+
+
     "accountPage": {
         "pageTitle": "Account",
         "profileAvatarAltText": "Profile",
@@ -135,13 +142,14 @@
         "RequestWithdrawalButton": "Request Withdrawal",
         "InfoText1": "Please allow up to 3 business days for processing the withdrawal request.",
         "InfoText2": "For any inquiries or issues, please contact our support team.",
-        "TasksNotCompleted": "You must finish all available tasks for today before withdrawing.",
         "FinePrint": "* Your withdrawal request will be processed within 3 business days. Any charges or fees that may apply are subject to the terms and conditions of the withdrawal policy. Always ensure the withdrawal address is correct to avoid delays.",
-        
+        "TasksNotCompleted": "You must finish all available tasks for today before withdrawing.",
+        "NoDeliveryAddress": "Please set a Delivery address in account tab > manage wallet",
+        "Success": "Withdrawal request submitted successfully!",
+
         "TasksNotCompleted": "You must finish all available tasks for today before withdrawing.",
         "ErrorMakingWithdrawal": "An error occurred while processing your request. Please try again.",
         "Snackbar": {
-            "Success": "Withdrawal request submitted successfully!",
             "InsufficientFunds": "Insufficient funds. Please check your balance and try again.",
             "InvalidAmount": "Invalid withdrawal amount. Please enter a valid amount."
         }

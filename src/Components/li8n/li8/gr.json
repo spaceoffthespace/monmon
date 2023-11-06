@@ -28,7 +28,11 @@
         "additionalInfoText2": "Aus Sicherheitsgründen stellen Sie sicher, dass Sie Ihre Wallet-Adresse vertraulich behandeln.",
         "snack1": "Die Wallet wurde erfolgreich aktualisiert!",
         "snack2": "Die Wallet wurde erfolgreich aktualisiert!",
-        "snack3": "Sie können Ihre Lieferadresse nur alle 24 Stunden aktualisieren."
+        "snack3": "Sie können Ihre Lieferadresse nur alle 24 Stunden aktualisieren.",
+        "walletAddressHelperText": "Geben Sie hier Ihre neue Wallet-Adresse ein",
+        "currencyHelperText": "Wählen Sie die Währung für das Wallet aus",
+        "clickToEdit": "Zum Aktualisieren klicken",
+        "curadd": "Ihre aktuelle Wallet-Adresse lautet:"
     },
     "accountPage": {
         "pageTitle": "Konto",
@@ -136,10 +140,11 @@
         "InfoText2": "Bei Fragen oder Problemen wenden Sie sich bitte an unseren Support.",
         "TasksNotCompleted": "Sie müssen alle verfügbaren Aufgaben für heute abschließen, bevor Sie abheben können.",
         "FinePrint": "* Ihr Abhebungsauftrag wird innerhalb von 3 Werktagen bearbeitet. Etwaige anfallende Gebühren unterliegen den Geschäftsbedingungen der Abhebungspolitik. Stellen Sie immer sicher, dass die Abhebungsadresse korrekt ist, um Verzögerungen zu vermeiden.",
+        "NoDeliveryAddress": "Bitte setzen Sie eine Lieferadresse im Konto-Tab > Wallet verwalten",
+        "Success": "Abhebungsauftrag erfolgreich übermittelt!",
 
         "ErrorMakingWithdrawal": "Beim Verarbeiten Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
         "Snackbar": {
-            "Success": "Abhebungsauftrag erfolgreich übermittelt!",
             "InsufficientFunds": "Unzureichendes Guthaben. Bitte überprüfen Sie Ihren Kontostand und versuchen Sie es erneut.",
             "InvalidAmount": "Ungültiger Abhebungsbetrag. Bitte geben Sie einen gültigen Betrag ein."
         }

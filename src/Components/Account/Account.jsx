@@ -208,16 +208,16 @@ useEffect(() => {
           <>
           <Typography variant="h6" className="account-username">
             {user.username}
-            <Typography variant="h6">{user.account_type}</Typography>        
+            {/* <Typography variant="h6">{user.account_type}</Typography>         */}
 
           </Typography>
           <div className="account-code-container">
             <Typography variant="body2" className="account-code">
-            {t('AccountComp.invitecode')}: {user.code}
+            {user.account_type}
             </Typography>
           </div>
             <Button variant="outlined" size="small" onClick={handleCopy}>
-            {copySuccess ? t('AccountComp.copiedLink') : t('AccountComp.copylink')}
+            {copySuccess ? t('AccountComp.copiedLink') : t('invites.copyInviteLink')}
             </Button>
             </>
           )}

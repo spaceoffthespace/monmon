@@ -1,15 +1,20 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MuiAlert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 import { AuthContext } from '../../Context/AuthContext';
 import './ManageWallet.css';
 import Navbutton from '../../Navbutton/NavButton';
+import { Grid, Paper, TextField, Button, Box, Card, CardContent, FormControl, InputLabel, Select, MenuItem, FormHelperText } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUniversity } from '@fortawesome/free-solid-svg-icons';
 import EditIcon from '@mui/icons-material/Edit';
 import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
+
+
+import usdt from '../../assets/tokens/usdt-trc.png';
+import usdteth from '../../assets/tokens/usdt_eth.png';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} variant="filled" ref={ref} {...props} />;
@@ -19,6 +24,7 @@ const ManageWallet = ({ onUpdateSuccess, handleGoBack }) => {
 
   const apiUrl = process.env.REACT_APP_API_URL;
 
+  const [currency, setCurrency] = useState('USDT-ERC20');
 
   const [newAddress, setNewAddress] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -54,7 +60,7 @@ const ManageWallet = ({ onUpdateSuccess, handleGoBack }) => {
       setOpenSnackbar(true);
     } catch (error) {
       console.error(error);
-      setAlertType('error');
+      setAlertType('success');
 
       // Check if error response from server contains a message
        // Check if error response from server contains a message
@@ -84,12 +90,24 @@ const ManageWallet = ({ onUpdateSuccess, handleGoBack }) => {
             {t('manageWalletPage.manageWalletHeading')}
             </Typography>
             {user.deliveryAddress && !isEditing ? (
-    <div className="wallet-display-container">
-        <Typography variant="body1" className="wallet-address-value">
-            {user.deliveryAddress}
-        </Typography>
-        <EditIcon onClick={() => setIsEditing(true)} /> {/* Pen icon for editing */}
-    </div>
+              
+
+                
+              
+              <div onClick={() => setIsEditing(true)} className="wallet-display-container">
+                <div>
+  <span style={{ color: '#2196f3' }}>
+  {t('manageWalletPage.curadd')}
+  </span>
+  <br />
+  {user.deliveryAddress}
+</div>
+    <EditIcon />
+    <Typography variant="body2" style={{ marginLeft: '5px', color: '#2196f3' }}>
+      {t('manageWalletPage.clickToEdit')} {/* Translation hook to provide text in different languages */}
+
+    </Typography>
+  </div>
 ) : (!user.deliveryAddress || isEditing) ? (
     <React.Fragment>
         {!user.deliveryAddress && 
@@ -101,11 +119,51 @@ const ManageWallet = ({ onUpdateSuccess, handleGoBack }) => {
             <TextField
                 type="text"
                 label="Update Wallet Address"
-                variant="outlined"
+                variant="filled"
                 value={newAddress}
                 onChange={(e) => setNewAddress(e.target.value)}
                 className="manage-wallet-input"
+                helperText={t('manageWalletPage.walletAddressHelperText')} // Add this line for helper text
+
             />
+
+
+<Grid item xs={12} sm={6} className="wallet-currency-selector">
+<FormControl fullWidth variant="filled" className="wallet-currency-selector">
+  <InputLabel id="currency-select-label">{t('RechargeComp.Currency')}</InputLabel>
+  <Select
+    labelId="currency-select-label"
+    id="currency-select"
+    value={currency}
+    onChange={(e) => setCurrency(e.target.value)}
+    label={t('RechargeComp.Currency')}
+    MenuProps={{ // Add this to adjust the style of the dropdown
+      PaperProps: {
+        style: {
+          maxHeight: '50vh', // Limit the height of the dropdown
+          overflow: 'auto', // Scroll inside the dropdown
+        },
+      },
+    }}
+  >
+            <MenuItem value="USDT-ERC20">
+              <div className="currency-select-item">
+                <img src={usdteth} alt="USDT (ERC20)" className="currency-icon" />
+                USDT (ERC20)
+              </div>
+            </MenuItem>
+            <MenuItem value="USDT-TRC20">
+              <div className="currency-select-item">
+                <img src={usdt} alt="USDT (TRC20)" className="currency-icon" />
+                USDT (TRC20)
+              </div>
+            </MenuItem>
+            {/* Add more currencies as needed */}
+          </Select>
+          <FormHelperText>{t('manageWalletPage.currencyHelperText')}</FormHelperText> {/* Add this line for currency helper text */}
+        </FormControl>
+      </Grid>
+
             <Button variant="contained" type="submit" className="manage-wallet-button">
             {t('manageWalletPage.updateWalletLabel')}
             </Button>

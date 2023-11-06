@@ -11,49 +11,66 @@
 }
 
 .manage-wallet-heading {
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* More space for visual separation */
     color: #333;
-}
-
-.wallet-address {
-    font-weight: bold;
-    color: #4caf50;
-}
-
-.wallet-address-value {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.no-wallet-address {
-    margin-bottom: 20px;
-    color: #ff5722;
-}
-
-.manage-wallet-form {
+    font-size: 1.5rem; /* Larger font size for heading */
+  }
+  
+  .manage-wallet-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
+    gap: 20px; /* Spacing between form elements */
+  }
+  
 
-.manage-wallet-input {
-    width: 100%;
-    margin-bottom: 20px;
-}
 
-.manage-wallet-button {
+
+
+  .manage-wallet-button {
     background-color: #2196f3;
     color: white;
-}
-
-.manage-wallet-button:hover {
+    padding: 10px 20px; /* Larger padding for a more clickable button */
+    border-radius: 5px; /* Consistent border-radius */
+    font-size: 1rem; /* Larger font size for button text */
+  }
+  
+  .manage-wallet-button:hover {
     background-color: #1976d2;
-}
-
-.manage-wallet-button:disabled {
-    background-color: #ccc;
-    color: #666;
-}
+  }
+  
+  .additional-info {
+    margin-top: 30px; /* Added space from the form */
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+  }
+  
+  .currency-select-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .currency-icon {
+    width: 24px;
+    height: auto;
+  }
+  
+  /* New style for the select input field */
+  .wallet-currency-selector .MuiOutlinedInput-root {
+    border-radius: 5px;
+  }
+  
+  /* Remove the underline from the input fields */
+  .MuiInput-underline:before, .MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom: none;
+  }
+  
+  /* Remove the focus outline to customize */
+  .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: transparent;
+  }
 
 .additional-info {
     margin-top: 20px;
