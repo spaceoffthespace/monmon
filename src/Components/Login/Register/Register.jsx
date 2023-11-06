@@ -205,7 +205,7 @@ const RegistrationPage = () => {
             }
       } else {
         setOpenSnackbar(true);
-          setErrorMessage(t('register.errors.genericError'));
+          setErrorMessage(t('register.genericError'));
       }
       console.error(error);
   }

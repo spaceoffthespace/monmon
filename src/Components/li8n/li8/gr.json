@@ -136,6 +136,7 @@
         "InfoText2": "Bei Fragen oder Problemen wenden Sie sich bitte an unseren Support.",
         "TasksNotCompleted": "Sie müssen alle verfügbaren Aufgaben für heute abschließen, bevor Sie abheben können.",
         "FinePrint": "* Ihr Abhebungsauftrag wird innerhalb von 3 Werktagen bearbeitet. Etwaige anfallende Gebühren unterliegen den Geschäftsbedingungen der Abhebungspolitik. Stellen Sie immer sicher, dass die Abhebungsadresse korrekt ist, um Verzögerungen zu vermeiden.",
+
         "ErrorMakingWithdrawal": "Beim Verarbeiten Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
         "Snackbar": {
             "Success": "Abhebungsauftrag erfolgreich übermittelt!",

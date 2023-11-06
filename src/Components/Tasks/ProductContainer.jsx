@@ -84,7 +84,7 @@ const Product = ({ task, onComplete }) => {
         onComplete(); // Call the onComplete function passed from the parent component to update tasks
       }
     } catch (error) {
-      if (error.response && error.response.data.error.includes('You cannot afford to complete this task.')) {
+      if (error?.response?.data?.error && typeof error.response.data.error === 'string' && error.response.data.error.includes('You cannot afford to complete this task.')) {
         const depositAmountMatch = error.response.data.error.match(/Required deposit: \$(\d+(\.\d+)?)/);
         if (depositAmountMatch) {
           const depositAmount = depositAmountMatch[1];
@@ -95,7 +95,9 @@ const Product = ({ task, onComplete }) => {
         setAlertSeverity('error');
         setSnackbarOpen(true);
       } else {
-        setSnackbarMessage(t('TaskComp.errorCompletingTask', { error: error.response ? error.response.data.error : t('unknownError') }));
+        // This will handle any other errors and ensure we don't run into a TypeError when accessing undefined properties
+        const errorMessage = error?.response?.data?.error || t('unknownError');
+        setSnackbarMessage(t('TaskComp.errorCompletingTask', { error: errorMessage }));
         setAlertSeverity('error');
         setSnackbarOpen(true);
       }

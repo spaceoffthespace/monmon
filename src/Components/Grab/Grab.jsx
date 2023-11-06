@@ -122,7 +122,7 @@ const AnalyticsRectangle = () => {
       <div className="analytics-section">
         <Typography variant="h6">{t('GrabComp.CurrentBalance')}</Typography>
         <Typography variant="h4">
-        {fetchingData ? <ClipLoader color="#FFFFFF" css={{animation: 'none'}} height={24} width={24} /> : (user.balance !== undefined ? `$${user.balance}` : '')}
+        {fetchingData || user.balance === undefined ? <ClipLoader color="#FFFFFF" css={{animation: 'none'}} height={24} width={24} /> : `$${user.balance}`}
         </Typography>
       </div>
     </Paper>

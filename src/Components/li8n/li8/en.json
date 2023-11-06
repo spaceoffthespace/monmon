@@ -137,6 +137,8 @@
         "InfoText2": "For any inquiries or issues, please contact our support team.",
         "TasksNotCompleted": "You must finish all available tasks for today before withdrawing.",
         "FinePrint": "* Your withdrawal request will be processed within 3 business days. Any charges or fees that may apply are subject to the terms and conditions of the withdrawal policy. Always ensure the withdrawal address is correct to avoid delays.",
+        
+        "TasksNotCompleted": "You must finish all available tasks for today before withdrawing.",
         "ErrorMakingWithdrawal": "An error occurred while processing your request. Please try again.",
         "Snackbar": {
             "Success": "Withdrawal request submitted successfully!",
@@ -251,7 +253,8 @@
         "requiredReferralCode": "Referral code is required!",
         "invalidCode": "Invalid referral code provided!",
         "blank": "This field may not be blank.",
-        "pass": "Passwords do not match!"
+        "pass": "Passwords do not match!",
+        "genericError": "an error has occured, Please check the information and try again."
     },
     "aboutus": {
         "pageTitle": "About Us",

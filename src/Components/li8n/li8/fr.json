@@ -134,8 +134,12 @@
         "RequestWithdrawalButton": "Demander le retrait",
         "InfoText1": "Veuillez prévoir jusqu'à 3 jours ouvrables pour le traitement de la demande de retrait.",
         "InfoText2": "Pour toute question ou problème, veuillez contacter notre équipe d'assistance.",
-        "TasksNotCompleted": "Vous devez terminer toutes les tâches disponibles pour aujourd'hui avant de pouvoir effectuer un retrait.",
         "FinePrint": "* Votre demande de retrait sera traitée dans un délai de 3 jours ouvrables. Toutes les frais éventuels sont soumis aux conditions de la politique de retrait. Assurez-vous toujours que l'adresse de retrait est correcte pour éviter les retards.",
+        "TasksNotCompleted": "Vous devez terminer toutes les tâches disponibles pour aujourd'hui avant de retirer de l'argent.",
+
+
+
+
         "ErrorMakingWithdrawal": "Une erreur s'est produite lors du traitement de votre demande. Veuillez réessayer.",
         "Snackbar": {
             "Success": "Demande de retrait soumise avec succès !",

@@ -88,7 +88,7 @@ const Withdraw = ({ handleGoBack }) => {
         if (error.response.data.error === "You must finish all available tasks for today before withdrawing.") {
             setMessage(t('WithdrawComp.TasksNotCompleted'));  // This is assuming you added a new entry in your translation JSON for this error message.
         } else {
-            setMessage(error.response.data.error);
+           setMessage(t('WithdrawComp.TasksNotCompleted'));
         }
     } else {
         setSeverity('error');
