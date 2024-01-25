@@ -2,7 +2,6 @@
     text-align: center;
     margin: 2em auto;
     padding: 1em;
-    background-color: #f8f8f8;
     border-radius: 8px;
 }
 
@@ -13,36 +12,37 @@
 }
 
 .partners-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* Change this number to adjust the number of logos per row */
+    display: flex; /* Using flex layout */
+    justify-content: space-around; /* Distribute space evenly */
     gap: 1em;
-    justify-items: center;
+    overflow-x: auto; /* Allows for horizontal scrolling */
+    padding-bottom: 1em; /* Add some padding to avoid clipping */
 }
 
 .partner-item {
-    width: 100px;
-    /* Adjust this value to control the width of each logo */
+    flex: 1; /* Allows items to grow and shrink as needed */
+    min-width: 80px; /* Minimum width of each item */
     height: auto;
+    align-self: center;
 }
 
-/* Optional: To ensure the images don't exceed their container */
 .partner-item img {
     max-width: 100%;
     max-height: 100%;
+    
 }
-
+#amazon-logo-shj {
+    width: auto; /* Adjust width to maintain aspect ratio */
+    height: 80%; /* Aligns height with other logos, adjust as needed */
+}
 /* Responsive styles */
 
 @media screen and (max-width: 480px) {
-
-    /* For screens up to 480px, show 1 logo per row */
     .partners-grid {
-        grid-template-columns: 1fr 1fr;
+        justify-content: start; /* Align items to the start on smaller screens */
     }
 
     .partner-item {
-        width: 100px;
-        /* Adjust this value for even smaller screens */
+        min-width: 50px; /* Smaller minimum width for smaller screens */
     }
 }

@@ -1,5 +1,26 @@
 .home-balance-container {
     width: 100%;
+    border-top-left-radius: -50px; /* Adjust the px value to increase or decrease the curve */
+    border-top-right-radius: -50px; /* Same as above */
+    background: url('../../assets/Banner.png') no-repeat center center;
+    background-size: cover;
+    /* Add other properties like padding, margin, etc., as needed */
     border-radius: 25px;
-    background: #43a8ff;
+}
+
+
+#head_home {
+    width: 20%; /* Adjust as needed */
+    margin-right: 10px; /* Adds space between the image and the text */
+}
+.grid_typ {
+    display: flex;
+    align-items: center; /* This will vertically center the items in the container */
+    justify-content: start; /* Aligns items to the start of the container */
+    padding-top: 30px;
+}
+
+.grid_typ h1 {
+    margin: 0; /* Removes default margins to better control the layout */
+    /* Additional styling */
 }

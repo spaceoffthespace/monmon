@@ -6,24 +6,30 @@ import aliexpress from '../../assets/partners/AliExpress-logo.png';
 import ebay from '../../assets/partners/EBay_logo.png';
 import etsy from '../../assets/partners/Etsy_logo.svg.png';
 import shopify from '../../assets/partners/Shopify-Logo.png';
+import amazon from '../../assets/Amazon_logo.png';
 
 const Partners = () => {
   return (
     <div className="partners-container">
-      <h2>Partners</h2>
+      <h2>Powered by</h2>
       <div className="partners-grid">
         <div className="partner-item">
-          <img src={aliexpress} alt="Partner 1" />
+          <img src={aliexpress}  />
         </div>
         <div className="partner-item">
-          <img src={ebay} alt="Partner 2" />
+          <img src={ebay}  />
         </div>
         <div className="partner-item">
-          <img src={etsy} alt="Partner 3" />
+          <img src={etsy}  />
         </div>
         <div className="partner-item">
-          <img src={shopify} alt="Partner 4" />
+          <img src={shopify}  />
         </div>
+        
+        <div className="partner-item">
+          <img id='amazon-logo-shj' src={amazon} />
+        </div>
+  
         {/* Repeat this pattern for more logos */}
       </div>
     </div>

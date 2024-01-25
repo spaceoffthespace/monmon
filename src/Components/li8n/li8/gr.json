@@ -26,8 +26,8 @@
         "updateWalletButton": "Wallet-Adresse aktualisieren",
         "additionalInfoText1": "Zusätzliche Informationen zur Verwaltung Ihrer Wallet-Adresse können hier hinzugefügt werden.",
         "additionalInfoText2": "Aus Sicherheitsgründen stellen Sie sicher, dass Sie Ihre Wallet-Adresse vertraulich behandeln.",
-        "snack1": "Die Wallet wurde erfolgreich aktualisiert!",
-        "snack2": "Die Wallet wurde erfolgreich aktualisiert!",
+        "snack1": "Wallet wurde erfolgreich aktualisiert!",
+        "snack2": "Fehler beim Aktualisieren der Wallet. Bitte versuchen Sie es erneut.",
         "snack3": "Sie können Ihre Lieferadresse nur alle 24 Stunden aktualisieren.",
         "walletAddressHelperText": "Geben Sie hier Ihre neue Wallet-Adresse ein",
         "currencyHelperText": "Wählen Sie die Währung für das Wallet aus",
@@ -177,7 +177,9 @@
         "succesdepo": "Erfolgreiche Einzahlung",
         "successwith": "Erfolgreiche Abhebung",
         "completed": "Abgeschlossene Aufträge",
-        "completedorder": "Abgeschlossene Bestellung"
+        "completedorder": "Abgeschlossene Bestellung",
+        "welcometext": "Willkommen"
+
     },
     "TaskComp": {
         "taskFrozen": "Aufgabe aufgrund Zeitüberschreitung gesperrt",
@@ -188,7 +190,9 @@
         "submitOrder": "Bestellung abschicken",
         "price": "Preis: {{price}} $",
         "commission": "Provision: {{commission}} $ ({{percentage}}%)",
-        "minutesSecondsFormat": "{{minutes}}:{{seconds}}"
+        "minutesSecondsFormat": "{{minutes}}:{{seconds}}",
+        "resolveBeforeContinuing": "Sie haben eine eingefrorene Aufgabe. Lösen Sie diese, bevor Sie mit anderen Aufgaben fortfahren."
+
     },
     "TaskTab": {
         "pending": "Ausstehend",
@@ -201,22 +205,22 @@
         "unlock": "Freischalten"
     },
     "RewardLevels": {
-        "Bronze1": "60 Produkte pro Tag",
+        "Bronze1": "20 Produkte pro Tag",
         "Bronze2": "Zugriff auf grundlegende Funktionen",
-        "Silver1": "80 Produkte pro Tag",
+        "Silver1": "30 Produkte pro Tag",
         "Silver2": "Höhere Provision",
         "Silver3": "Zugang zu exklusivem Inhalt",
         "Silver4": "Frühe Veröffentlichungen von Produkten",
-        "Gold1": "120 Produkte pro Tag",
+        "Gold1": "40 Produkte pro Tag",
         "Gold2": "Höhere Provision",
         "Gold3": "Prioritätssupport",
         "Gold4": "Sonderangebote",
-        "Platinum1": "160 Produkte pro Tag",
+        "Platinum1": "50 Produkte pro Tag",
         "Platinum2": "Höhere Provision",
         "Platinum3": "Zugang zu Teams",
         "Platinum4": "Premium 24/7 Support",
         "Platinum5": "Exklusive Angebote",
-        "Diamond1": "200 Produkte pro Tag",
+        "Diamond1": "60 Produkte pro Tag",
         "Diamond2": "Höhere Provision",
         "Diamond3": "Zugang zu Teams",
         "Diamond4": "Höchste Priorität beim Support",

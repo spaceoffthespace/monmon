@@ -73,7 +73,7 @@ const Task = () => {
         <Tabs
           value={value}
           onChange={handleChange}
-          scrollButtons="off"
+          scrollButtons="false"
           variant="fullWidth"
           aria-label="scrollable prevent tabs example"
         >

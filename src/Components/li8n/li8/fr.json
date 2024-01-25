@@ -27,7 +27,7 @@
         "additionalInfoText1": "Des informations supplémentaires sur la gestion de votre adresse de portefeuille peuvent être ajoutées ici.",
         "additionalInfoText2": "Pour des raisons de sécurité, assurez-vous de garder votre adresse de portefeuille confidentielle.",
         "snack1": "Le portefeuille a été mis à jour avec succès !",
-        "snack2": "Le portefeuille a été mis à jour avec succès !",
+        "snack2": "Erreur lors de la mise à jour du portefeuille. Veuillez réessayer.",
         "snack3": "Vous ne pouvez mettre à jour votre adresse de livraison qu'une fois toutes les 24 heures.",
         "walletAddressHelperText": "Entrez ici votre nouvelle adresse de portefeuille",
         "currencyHelperText": "Sélectionnez la devise pour le portefeuille",
@@ -181,7 +181,8 @@
         "succesdepo": "Dépôt réussi",
         "successwith": "Retrait réussi",
         "completed": "Commandes terminées",
-        "completedorder": "Commande terminée"
+        "completedorder": "Commande terminée",
+        "welcometext": "Bienvenue"
     },
     "TaskComp": {
         "taskFrozen": "Tâche gelée en raison du délai d'attente",
@@ -192,7 +193,9 @@
         "submitOrder": "Soumettre la commande",
         "price": "Prix : {{price}} $",
         "commission": "Commission : {{commission}} ({{percentage}} %)",
-        "minutesSecondsFormat": "{{minutes}}:{{seconds}}"
+        "minutesSecondsFormat": "{{minutes}}:{{seconds}}",
+        "resolveBeforeContinuing": "Vous avez une tâche gelée. Résolvez-la avant de continuer les autres tâches."
+
     },
     "TaskTab": {
         "pending": "En attente",
@@ -205,22 +208,22 @@
         "unlock": "Déverrouiller"
     },
     "RewardLevels": {
-        "Bronze1": "60 produits par jour",
+        "Bronze1": "20 produits par jour",
         "Bronze2": "Accès aux fonctionnalités de base",
-        "Silver1": "80 produits par jour",
+        "Silver1": "30 produits par jour",
         "Silver2": "Commission plus élevée",
         "Silver3": "Accès au contenu exclusif",
         "Silver4": "Lancements de produits anticipés",
-        "Gold1": "120 produits par jour",
+        "Gold1": "40 produits par jour",
         "Gold2": "Commission plus élevée",
         "Gold3": "Support prioritaire",
         "Gold4": "Remises spéciales",
-        "Platinum1": "160 produits par jour",
+        "Platinum1": "50 produits par jour",
         "Platinum2": "Commission plus élevée",
         "Platinum3": "Accès aux équipes",
         "Platinum4": "Support premium 24/7",
         "Platinum5": "Offres exclusives",
-        "Diamond1": "200 produits par jour",
+        "Diamond1": "60 produits par jour",
         "Diamond2": "Commission plus élevée",
         "Diamond3": "Accès aux équipes",
         "Diamond4": "Support en priorité",

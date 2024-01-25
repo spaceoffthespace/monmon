@@ -64,12 +64,13 @@ const ManageWallet = ({ onUpdateSuccess, handleGoBack }) => {
 
       // Check if error response from server contains a message
        // Check if error response from server contains a message
-    if (error.response && error.response.data && error.response.data.message) {
-      setAlertMessage(t('manageWalletPage.snack3'));
-    } else {
-      setAlertType('error');
-      setAlertMessage(t('manageWalletPage.snack2'));
-    }
+       if (error.response && error.response.data && error.response.data.message) {
+        setAlertMessage(t('manageWalletPage.snack3')); // Assuming this is a success message
+        setAlertType('success'); // Keep as success if the message indicates a successful operation
+      } else {
+        setAlertMessage(t('manageWalletPage.snack2')); // Assuming this is an error message
+        setAlertType('error'); // This should be 'error' to indicate a problem
+      }
 
       setOpenSnackbar(true);
     }

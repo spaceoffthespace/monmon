@@ -6,6 +6,12 @@ import { AuthContext } from '../../Context/AuthContext';
 import './HomeBalance.css';
 import { useTranslation } from 'react-i18next';
 import 'chart.js/auto';
+import IconButton from '@mui/material/IconButton';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import banner from '../../assets/Banner.png'
+
+import head from '../../assets/heads/head_9.png'
+
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -96,20 +102,46 @@ const options = {
   const handleStartButtonClick = () => {
     setActiveNavTab('grab');
   };
+  const handleHelpclick = () => {
+    setActiveNavTab('account');
+  };
 
 
 
     return (
       <div className="home-balance-container">
-          <Card sx={{ bgcolor: '#43a8ff', padding: '16px', borderRadius: '12px', position: 'relative' }}> 
-              <CardContent>
-                  <Typography variant="h5" className="title" color="white">
-                  {t('HomeComp.personal')}
-                  </Typography>
-                  
-                  <Grid container spacing={3}>
+<Card sx={{ 
+    width: '100%', 
+    borderRadius: '25px', 
+    padding: '16px', 
+    position: 'relative',
+    background: `url(${banner}) no-repeat center center`, 
+    backgroundSize: 'cover',
 
-                      <Grid item xs={4} container direction="column" alignItems="center">
+
+}}>
+              <CardContent>
+              <div style={{ 
+        width: '100px', 
+        height: '5px', 
+        backgroundColor: 'white', 
+        margin: '5px auto 0px auto', // Added bottom margin
+        borderRadius: '2.5px' 
+    }}></div>
+
+                    <Typography color="white" className='grid_typ'>
+
+                        <img id='head_home' src={head}/> <h1>{t('HomeComp.welcometext')}, {user.first_name}</h1>
+                    </Typography>
+                  <Typography variant="h5" className="title" color="white">
+                  {/* {t('HomeComp.personal')} */}
+                  </Typography>
+                  <div style={{ paddingBottom: '20px' }}></div>
+
+                  
+                  <Grid container spacing={3} >
+
+                      <Grid item xs={4} container direction="column" alignContent="center">
                           <Typography variant="subtitle1" color="white">
                           {t('HomeComp.total')}
                           </Typography>
@@ -121,7 +153,7 @@ const options = {
                       </div>
                       </Grid>
 
-                      <Grid item xs={4} container direction="column" alignItems="center">
+                      <Grid item xs={4} container direction="column" alignContent="center">
                           <Typography variant="subtitle1" color="white">
                           {t('HomeComp.todays')}
                           </Typography>
@@ -133,8 +165,8 @@ const options = {
                           </div>
                       </Grid>
 
-                      <Grid item xs={4} container direction="column" alignItems="center">
-                          <Typography variant="subtitle1" color="white">
+                      <Grid item xs={4} container direction="column" alignContent="center">
+                          <Typography variant="subtitle1" color="white" >
                           {t('HomeComp.completed')}
                           </Typography>
                           <Typography variant="h6" component="div" color="white" mb={2}>
@@ -145,6 +177,24 @@ const options = {
                           </div>
                       </Grid>
                   </Grid>
+
+                        <IconButton
+            sx={{
+                position: 'absolute',
+                bottom: '13px',
+                right: '100px', // Adjust the position accordingly
+                
+                color: 'white',
+                borderRadius: '50%', // Creates a circle shape
+                '&:hover': {
+                    
+                    // Optional: Change color on hover
+                }
+            }}
+            onClick={handleHelpclick}  // You'll need to define this function to handle the click event
+        >
+            <HelpOutlineIcon />
+        </IconButton>
 
                   <Button 
                       variant="contained"

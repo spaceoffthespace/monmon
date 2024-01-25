@@ -270,7 +270,7 @@ const Recharge = () => {
             $5000
           </Button>
         </Grid>
-        <Grid item xs={4} sm={4} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+        {/* <Grid item xs={4} sm={4} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
           <Button variant="contained" onClick={() => handleOptionClick(10000)} fullWidth>
           <img
                     src={diamond}
@@ -320,7 +320,7 @@ const Recharge = () => {
                   />
             $50000
           </Button>
-        </Grid>
+        </Grid> */}
 
       </Grid>
 

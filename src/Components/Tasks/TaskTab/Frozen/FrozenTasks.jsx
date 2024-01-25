@@ -46,29 +46,36 @@ const FrozenTasksComponent = ({ tasks }) => {
         setOpenSnackbar(true);
       }
     } catch (error) {
-      if (
-        error.response &&
-        error.response.data.error.includes('You cannot afford to complete this task.')
-      ) {
-        const depositAmountMatch = error.response.data.error.match(/Required deposit: \$(\d+(\.\d+)?)/);
-        if (depositAmountMatch) {
-          const depositAmount = depositAmountMatch[1];
-          setSnackbarMessage(
-            t('TaskComp.additionalDepositRequired', { deposit: depositAmount })
-          );
+      // Check for specific error messages
+      if (error?.response?.status === 400) {
+        if (error.response.data.error.includes('You cannot afford to complete this task.')) {
+          const depositAmountMatch = error.response.data.error.match(/Required deposit: \$(\d+(\.\d+)?)/);
+          if (depositAmountMatch) {
+            const depositAmount = depositAmountMatch[1];
+            const translatedMessage = t('TaskComp.additionalDepositRequired', { deposit: depositAmount });
+            console.log(translatedMessage);  // Check what the translated message looks like
+            setSnackbarMessage(translatedMessage);
+            setAlertSeverity('error');
+            setOpenSnackbar(true);
+          } else {
+            setSnackbarMessage(t('TaskComp.errorCompletingTask', { error: error.response.data.error }));
+            setAlertSeverity('error');
+            setOpenSnackbar(true);
+          }
+        } else if (error.response.data.error === "You have a frozen task. Resolve it before completing other tasks.") {
+          setSnackbarMessage(t('TaskComp.resolveBeforeContinuing'));
+          setAlertSeverity('error');
+          setOpenSnackbar(true);
         } else {
-          setSnackbarMessage(
-            t('TaskComp.errorCompletingTask', { error: error.response.data.error })
-          );
+          // Handle any other 400 errors not specifically accounted for
+          setSnackbarMessage(t('TaskComp.errorCompletingTask', { error: error.response.data.error }));
+          setAlertSeverity('error');
+          setOpenSnackbar(true);
         }
-        setAlertSeverity('error');
-        setOpenSnackbar(true);
       } else {
-        setSnackbarMessage(
-          t('TaskComp.errorCompletingTask', {
-            error: error.response ? error.response.data.error : t('unknownError'),
-          })
-        );
+        // This will handle any other errors and ensure we don't run into a TypeError when accessing undefined properties
+        const errorMessage = error?.response?.data?.error || t('TaskComp.unknownError');
+        setSnackbarMessage(t('TaskComp.errorCompletingTask', { error: errorMessage }));
         setAlertSeverity('error');
         setOpenSnackbar(true);
       }

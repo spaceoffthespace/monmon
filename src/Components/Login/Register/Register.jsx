@@ -9,6 +9,8 @@ import Typography from '@mui/material/Typography';
 import { useNavigate, useParams } from 'react-router-dom';
 import frontfront from '../../../Components/assets/email-4044165_640.jpg'
 import Grid from '@mui/material/Grid';
+import ClipLoader from "react-spinners/ClipLoader";  // Import the loader
+
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import LoadLoader from '../../Loader/ClipsLoader'; // Ensure you import your loader component correctly
@@ -40,10 +42,12 @@ const RegistrationPage = () => {
   const [clientIP, setClientIP] = useState('');
   const [country, setCountry] = useState('');
   const [countryIP, setCountryIP] = useState('');
+  const [isCaptchaLoaded, setIsCaptchaLoaded] = useState(false);
+
 
   const [defaultCountry, setDefaultCountry] = useState(() => {
     const storedDefaultCountry = localStorage.getItem('defaultCountry');
-    return storedDefaultCountry || ''; // Set the default value here
+    return storedDefaultCountry || 'US'; // Set the default value here
   });
   const [phoneNumber, setPhoneNumber] = useState('');
 
@@ -112,6 +116,8 @@ const RegistrationPage = () => {
         const data = response.data;
         setCaptchaKey(data.captcha_key);
         setCaptchaImage(`${CAPTCHAurl}${data.captcha_image}`);
+        setIsCaptchaLoaded(true)
+
       })
       .catch(error => {
         console.error("Error fetching captcha:", error);
@@ -351,7 +357,16 @@ const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
           helperText={fieldErrors.ref_code ? fieldErrors.ref_code[0] : ""}
         />
        <div className="captcha-register-container">
-        <img src={captchaImage} alt="CAPTCHA" className="captcha-image" />
+       {isCaptchaLoaded ? (
+    <img
+      src={captchaImage}
+      alt="CAPTCHA"
+      className="captcha-image"
+      onLoad={() => setIsCaptchaLoaded(true)} // Set to true once the image has loaded
+    />
+  ) : (
+    <ClipLoader color="#000000" size={24} />
+  )}
         <TextField 
             label="Enter CAPTCHA"
             variant="filled"

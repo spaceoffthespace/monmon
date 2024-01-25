@@ -8,9 +8,12 @@ import Withdraw from '../Withdraw/Withdraw';
 import Recharge from '../Recharge/Recharge';
 import NotificationsComponent from '../Account/Menu/Notifications/Notifications';
 import amazonlogo from '../assets/download.png';
+import logogo from '../assets/logo2.png';
+import bestlogo from '../assets/best.png';
 import homeimg1 from '../assets/home-img.jpg';
 import homeimg2 from '../assets/home-img2.png';
 import homeimg3 from '../assets/home-img3.jpg';
+import ref from '../assets/ref.png';
 import victoria from '../assets/victoria.jpg';
 import support from '../assets/support.png';
 
@@ -20,10 +23,10 @@ import Invite from '../Account/Invite/Invite';
 
 import ProductSlider from './ProductSlider/ProductSlider';
 
-import recharge from '../assets/recharge.png';
-import widthdraw from '../assets/withdraw.png';
+import recharge from '../assets/recharge2.png';
+import widthdraw from '../assets/withdraw2.png';
 import invite from '../assets/invite.png';
-import homenotif from '../assets/notification.png';
+import homenotif from '../assets/notification2.png';
 
 import HomeBalance from './HomeBalance/HomeBalance';
 import HonorRoll from './Honorroll/Honoroll';
@@ -118,38 +121,84 @@ useEffect(() => {
     <div>
       {activeCum === "home" && (
         <div className="home-container">
+          <div className='home-nav'>
 
-        <div className="logo-home-container">
-          <div className="left">
-            <img src={support} className="sup-image" onClick={() => setActiveCum('chatsup')} />
-          </div>
 
-          <div className="center">
-            <img src={amazonlogo}  loading="lazy" className="logo-image" />
-          </div>
+          <div className="logo-home-container">
 
-          <div className="right">
-            <div className="language-container">
-              <select value={language} onChange={handleLanguageChange}>  {/* Set value prop to ensure the selected option matches the state */}
-                <option value="en">English</option>
-                <option value="ar">العربية</option> 
-                <option value="fr">Français</option>
-                <option value="gr">Deutsch</option> 
-              </select>
+            <div className="left">
+              <img src={support} className="sup-image" onClick={() => setActiveCum('chatsup')} />
             </div>
+
+            <div className="center">
+              <img src={logogo}  loading="lazy" className="logo-image" />
+            </div>
+
+            <div className="right">
+              <div className="language-container">
+                <select value={language} onChange={handleLanguageChange}>  {/* Set value prop to ensure the selected option matches the state */}
+                  <option value="en">English</option>
+                  <option value="ar">العربية</option> 
+                  <option value="fr">Français</option>
+                  <option value="gr">Deutsch</option> 
+                </select>
+              </div>
+            </div>
+
           </div>
+
         </div>
 
         <div className="image-spot-container">
-        <div className={`image-spot-skeleton ${isLoaded ? 'fade-out' : 'fade-in'}`}></div>
-        <img
-            src={currentImage}
-            className={`image-spot ${isLoaded ? 'fade-in' : 'fade-out'}`}
-            onLoad={handleImageLoad}
-        />
-    </div>
-     
+
+          <div className={`image-spot-skeleton ${isLoaded ? 'fade-out' : 'fade-in'}`}></div>
           
+          <img
+              src={currentImage}
+              className={`image-spot ${isLoaded ? 'fade-in' : 'fade-out'}`}
+              onLoad={handleImageLoad}
+          />
+
+        </div>
+     
+
+      
+
+          <div className='home-balance-main-container'>
+            <HomeBalance   setActiveNavTab={setActiveNavTab}/>
+          </div>
+
+          <Box
+  display="flex"
+  justifyContent="center"
+  alignItems="center"
+  width="100%"
+  
+  borderRadius={12}
+  p={4}
+  className="button-section"
+>
+  <Grid container spacing={1} justify="center">
+    {[
+     { src: recharge, alt: "Recharge", text: t('HomeComp.Recharge'), action: () => setActiveNavTab('recharge') },
+     { src: widthdraw, alt: "Withdraw", text: t('HomeComp.Withdraw'), action: () => setActiveCum('withdraw') },
+     { src: homenotif, alt: "Notifications", text: t('HomeComp.Notifications'), action: () => setActiveCum('notifications'), notif: true },
+     { src: invite, alt: "Invite", text: t('HomeComp.Invite'), action: () => setActiveCum('invite') }
+    ].map((item, index) => (
+      <Grid item xs={3} sm={3} md={3} key={index}>
+        <div className={`button-item button-${item.alt.toLowerCase()}`} onClick={item.action}>
+          <div className="notif-image-container">
+            {item.notif && unreadCount > 0 && (
+              <span className="unread-home-badge">{unreadCount}</span>
+            )}
+            <img src={item.src} alt={item.alt} className="button-image" />
+          </div>
+        </div>
+        <div className="button-text">{item.text}</div> {/* Moved outside the `.button-item` */}
+      </Grid>
+    ))}
+  </Grid>
+</Box>
           <Box
             bgcolor="white"
             borderRadius={24}
@@ -165,49 +214,13 @@ useEffect(() => {
             </div>
             <div className="announcement-text">
               <marquee direction="left" behavior="scroll" scrollamount="4">
-                Welcome to the Amazon platform! As long as you have a mobile phone or computer, you can join our work
-                anytime, anywhere, and the operation is simple. Match task orders through the intelligent system of Amazon
+                Welcome to DMC!(Digital Marketplace Catalysts)  platform! As long as you have a mobile phone or computer, you can join our work
+                anytime, anywhere, and the operation is simple. Match task orders through the intelligent system of DMC
                 platform every day, help merchants increase sales and reputation, and complete task orders to get the
                 corresponding principal + commission, and easily earn high remuneration!
               </marquee>
             </div>
           </Box>
-
-          <Box
-  display="flex"
-  justifyContent="center"
-  alignItems="center"
-  width="100%"
-  
-  borderRadius={12}
-  p={4}
-  className="button-section"
->
-  <Grid container spacing={3} justify="center">
-    {[
-     { src: recharge, alt: "Recharge", text: t('HomeComp.Recharge'), action: () => setActiveNavTab('recharge') },
-     { src: widthdraw, alt: "Withdraw", text: t('HomeComp.Withdraw'), action: () => setActiveCum('withdraw') },
-     { src: homenotif, alt: "Notifications", text: t('HomeComp.Notifications'), action: () => setActiveCum('notifications'), notif: true },
-     { src: invite, alt: "Invite", text: t('HomeComp.Invite'), action: () => setActiveCum('invite') }
-    ].map((item, index) => (
-      <Grid item xs={3} sm={3} md={3} key={index}>
-        <div className="button-item" onClick={item.action}>
-          <div className="notif-image-container">
-            {item.notif && unreadCount > 0 && (
-              <span className="unread-home-badge">{unreadCount}</span>
-            )}
-            <img src={item.src} alt={item.alt} className="button-image" />
-          </div>
-          <div className="button-text">{item.text}</div>
-        </div>
-      </Grid>
-    ))}
-  </Grid>
-</Box>
-          <div className='home-balance-main-container'>
-
-          <HomeBalance   setActiveNavTab={setActiveNavTab}/>
-          </div>
           <div style={{ paddingBottom: '20px' }}>
 
           </div>

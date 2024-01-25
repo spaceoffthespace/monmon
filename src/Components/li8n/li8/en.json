@@ -27,7 +27,7 @@
         "additionalInfoText1": "Additional information about managing your wallet address can go here.",
         "additionalInfoText2": "For security purposes, make sure to keep your wallet address confidential.",
         "snack1": "Wallet has been updated successfully!",
-        "snack2": "Wallet has been updated successfully!",
+        "snack2": "Error updating wallet. Please try again.",
         "snack3": "You can only update your delivery address once every 24 hours.",
         "walletAddressHelperText": "Enter your new wallet address here",
         "currencyHelperText": "Select the currency for the wallet",
@@ -121,7 +121,7 @@
         "text3": "Heads-Up: Every time you obtain a task, its details are shared with the merchant. Orders left unresolved for over an hour get put on a temporary freeze, along with the task's associated funds, until further clarification.",
         "insufficientBalance": "Insufficient balance to grab a task. Please recharge a minimum of 20USD.",
         "pendingTask": "You have an existing pending task. Please complete it before grabbing a new one.",
-        "noTasksLeft": "You have reached your daily limit for orders, Please upgrade for more daily tasks."
+        "noTasksLeft": "You have reached your daily limit for orders, Please upgrade for more daily tasks, or come back tommorow "
     },
     "RechargeComp": {
         "Pagetitle": "Recharge",
@@ -182,18 +182,21 @@
         "succesdepo": "Successful Deposit",
         "successwith": "Successful Withdrawal",
         "completed": "Completed Orders",
-        "completedorder": "Completed Order"
+        "completedorder": "Completed Order",
+        "welcometext": "Welcome"
     },
     "TaskComp": {
         "taskFrozen": "Task frozen due to timeout",
         "taskCompleted": "Task completed successfully",
-        "errorCompletingTask": "Error completing task: {{error}}",
+        "errorCompletingTask": "Error completing task:",
         "unknownError": "Unknown error",
-        "additionalDepositRequired": "You need to deposit an additional ${{deposit}} to complete this task.",
+        "additionalDepositRequired": "An additional deposit of ${{deposit}} is required to complete this task.",
         "submitOrder": "Submit Order",
         "price": "Price: ${{price}}",
         "commission": "Commission: ${{commission}} ({{percentage}}%)",
-        "minutesSecondsFormat": "{{minutes}}:{{seconds}}"
+        "minutesSecondsFormat": "{{minutes}}:{{seconds}}",
+        "resolveBeforeContinuing": "You have a frozen task. Resolve it before completing other tasks."
+
     },
     "TaskTab": {
         "pending": "Pending",
@@ -206,22 +209,22 @@
         "unlock": "Unlock"
     },
     "RewardLevels": {
-        "Bronze1": "60 Products per day",
+        "Bronze1": "20 Products per day",
         "Bronze2": "Access to basic features",
-        "Silver1": "80 Products per day",
+        "Silver1": "30 Products per day",
         "Silver2": "Higher commission",
         "Silver3": "Exclusive content access",
         "Silver4": "Early product releases",
-        "Gold1": "120 Products per day",
+        "Gold1": "40 Products per day",
         "Gold2": "Higher commission",
         "Gold3": "Priority support",
         "Gold4": "Special discounts",
-        "Platinum1": "160 Products per day",
+        "Platinum1": "50 Products per day",
         "Platinum2": "Higher commission",
         "Platinum3": "Access to Teams",
         "Platinum4": "Premium 24/7 support",
         "Platinum5": "Exclusive offers",
-        "Diamond1": "200 Products per day",
+        "Diamond1": "60 Products per day",
         "Diamond2": "Higher commission",
         "Diamond3": "Access to Teams",
         "Diamond4": "Top priority support",
